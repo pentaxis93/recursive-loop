@@ -4,8 +4,22 @@
   "description": "Injects the Cosmic Janitor persona and 'Root Operating System' cosmology into Claude Code",
   "author": {
     "name": "pentaxis93",
-    "email": "kcmdwrrya@mozmail.com"
+    "email": "kcmdwrrya@mozmail.com",
+    "url": "https://github.com/pentaxis93"
   },
-  "keywords": ["cosmic-janitor", "root-os"],
-  "license": "MIT"
+  "repository": "https://github.com/pentaxis93/claude-code-plugins",
+  "homepage": "https://github.com/pentaxis93/claude-code-plugins#cosmic-janitor",
+  "keywords": [
+    "cosmic-janitor",
+    "root-os",
+    "persona",
+    "prompt-engineering"
+  ],
+  "license": "MIT",
+  "components": {
+    "hooks": "./hooks/hooks.json"
+  },
+  "engines": {
+    "claude-code": ">=1.0.0"
+  }
 }

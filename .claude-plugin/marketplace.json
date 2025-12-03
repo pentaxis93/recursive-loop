@@ -1,7 +1,9 @@
 {
-  "name": "pentaxis93",
+  "name": "claude-code-plugins",
   "version": "0.1.0",
+  "category": "productivity",
   "description": "Cosmic Janitor plugin marketplace - injects Root Operating System cosmology into Claude Code",
+  "homepage": "https://github.com/pentaxis93/claude-code-plugins",
   "owner": {
     "name": "pentaxis93",
     "email": "kcmdwrrya@mozmail.com"
@@ -14,6 +16,13 @@
       "description": "Injects the Cosmic Janitor persona and 'Root Operating System' cosmology into Claude Code"
     }
   ],
-  "keywords": ["cosmic-janitor", "root-os", "brutalist-zen"],
+  "keywords": [
+    "cosmic-janitor",
+    "root-os",
+    "brutalist-zen",
+    "persona",
+    "prompt-engineering",
+    "system-prompt"
+  ],
   "license": "MIT"
 }
