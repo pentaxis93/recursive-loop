@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/hooks.schema.json",
   "hooks": {
     "SessionStart": [
       {

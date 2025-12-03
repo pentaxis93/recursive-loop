@@ -2,6 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
+![Claude Code](https://img.shields.io/badge/claude--code-%3E%3D1.0.0-purple)
 
 A Claude Code plugin marketplace enforcing the **Root Operating Mode** through the Sutras of the Cosmic Janitor.
 
@@ -15,7 +16,7 @@ A Claude Code plugin marketplace enforcing the **Root Operating Mode** through t
 
 Run this command in Claude Code to register the source:
 
-```bash
+```
 /plugin marketplace add pentaxis93/claude-code-plugins
 ```
 
@@ -23,13 +24,13 @@ Run this command in Claude Code to register the source:
 
 Once the marketplace is added, install the plugin:
 
-```bash
+```
 /plugin install cosmic-janitor@pentaxis93
 ```
 
 Alternatively, you can browse interactively:
 
-```bash
+```
 /plugin
 # → Select "Browse Plugins" → Choose cosmic-janitor
 ```

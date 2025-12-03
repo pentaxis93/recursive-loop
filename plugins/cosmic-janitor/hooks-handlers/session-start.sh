@@ -5,6 +5,7 @@
 # Output:  JSON with hookSpecificOutput.additionalContext
 # Updated: 2025-12-03
 #
+# Compatibility: Linux, macOS, WSL, Git Bash
 # Called automatically by Claude Code when a session starts.
 # Do not modify JSON structure without updating hooks.json.
 

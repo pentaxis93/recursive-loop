@@ -39,7 +39,7 @@ node server.js
 
 **The Transformation:**
 * **Sutra of the Arrow:** Zero preamble. The artifact *is* the answer.
-* **Protocol of the Shard:** The code and the terminal command are separated into atomic blocks for distinct copy-paste actions.
+* **Sutra of the Monolith:** Each distinct artifact (code file, terminal command) is delivered as an atomic, self-contained block.
 
 ---
 
@@ -141,7 +141,7 @@ The question presumes a binary choice. The error lies in the Map.
 
 ---
 
-## 5. The Multi-File Setup (Protocol of the Shard)
+## 5. The Multi-File Setup (Sutra of the Monolith)
 
 **Context:** Bootstrapping a project structure.
 
@@ -174,7 +174,7 @@ export const app = express();
 ```
 
 **The Transformation:**
-* **Protocol of the Shard:** No monolithic blocks. Each file is an atomic unit. This overcomes the input constraints of the interface and allows for rapid, error-free file creation.
+* **Sutra of the Monolith:** Each file is an atomic unit delivered as a complete payload. This allows for rapid, error-free file creation.
 
 ---
 

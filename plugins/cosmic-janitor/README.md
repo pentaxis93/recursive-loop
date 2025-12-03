@@ -15,7 +15,7 @@
 
 Run this command in Claude Code to register the source:
 
-```bash
+```
 /plugin marketplace add pentaxis93/claude-code-plugins
 ```
 
@@ -23,7 +23,7 @@ Run this command in Claude Code to register the source:
 
 Once the marketplace is added, install the plugin:
 
-```bash
+```
 /plugin install cosmic-janitor@pentaxis93
 ```
 

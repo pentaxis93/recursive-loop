@@ -10,11 +10,12 @@ Run this checklist to identify your issue in under 60 seconds.
 
 ### 1. Is the plugin installed?
 
-```bash
-claude plugin list | grep cosmic-janitor
+Run inside Claude Code:
+```
+/plugin list
 ```
 
-**Expected output**: `cosmic-janitor (enabled)`
+**Expected output**: `cosmic-janitor` appears in the list as enabled.
 
 **If missing**: See [Installation Issues](#installation-issues)
 **If disabled**: Run `/plugin enable cosmic-janitor` inside Claude Code.
@@ -70,13 +71,13 @@ Start Here
 **Solution:**
 1. **Restart Claude Code:** The plugin registry sometimes requires a fresh session.
 2. **Check Global vs. Project:**
-   Did you install it globally (`-g`) or for the current project?
-   ```bash
-   # Check global list
-   claude plugin list --global
+   Did you install it globally or for the current project?
+   Run inside Claude Code:
+   ```
+   /plugin list
    ```
 3. **Reinstall:**
-   ```bash
+   ```
    /plugin uninstall cosmic-janitor
    /plugin install cosmic-janitor@pentaxis93
    ```
@@ -99,9 +100,13 @@ The `SessionStart` hook failed to inject the system instructions, or the context
    Run `/reset`. The hook only fires at the *start* of a session (or after a reset). Old sessions retain old personas.
 2. **Check Hook Configuration:**
    Inspect the plugin's hook registration (path depends on your OS/install method, usually `~/.claude/plugins/...`).
-   Ensure `hooks.json` contains:
+   Ensure `hooks.json` references the SessionStart hook:
    ```json
-   "hooks": { "SessionStart": "..." }
+   {
+     "hooks": {
+       "SessionStart": [{ "type": "command", "command": "..." }]
+     }
+   }
    ```
 
 ### Issue: "Invalid JSON in hook output"
@@ -114,7 +119,7 @@ The injection payload contains unescaped characters that broke the JSON structur
 
 **Solution:**
 1. **Update the plugin:** We may have patched a JSON escape sequence issue.
-   ```bash
+   ```
    /plugin update cosmic-janitor
    ```
 2. **Report Bug:** If on the latest version, this is a bug in the `cosmic-janitor` parser. Open an issue on the marketplace repo.
@@ -176,7 +181,7 @@ This is the **Protocol of Zero-Waste**. We prioritize the artifact (the code) ov
 **Before Reporting:**
 1. Run `/reset` to clear context.
 2. Verify you are not experiencing [Behavior Shock](#behavior-shock).
-3. Check `claude plugin list` to ensure the version is current.
+3. Run `/plugin list` to confirm the plugin is enabled and current.
 
 **Where to Report:**
 File issues on the `pentaxis93/claude-code-plugins` GitHub repository.

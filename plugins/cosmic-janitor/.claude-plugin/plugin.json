@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/plugin.schema.json",
   "name": "cosmic-janitor",
   "version": "0.1.0",
   "description": "Injects the Cosmic Janitor persona and 'Root Operating System' cosmology into Claude Code",
