@@ -152,23 +152,23 @@ The question presumes a binary choice. The error lies in the Map.
 
 **Claude:**
 
+`package.json`
 ```json
-// package.json
 {
   "name": "api-core",
   "scripts": { "dev": "ts-node src/index.ts" }
 }
 ```
 
+`tsconfig.json`
 ```json
-// tsconfig.json
 {
   "compilerOptions": { "target": "ES2022", "outDir": "dist" }
 }
 ```
 
+`src/index.ts`
 ```typescript
-// src/index.ts
 import express from 'express';
 export const app = express();
 ```

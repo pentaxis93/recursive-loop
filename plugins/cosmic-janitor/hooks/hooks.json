@@ -1,14 +1,9 @@
 {
-  "description": "Injects the Root Operating System environment and Cosmic Janitor persona into every Claude Code session",
   "hooks": {
     "SessionStart": [
       {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/session-start.sh"
-          }
-        ]
+        "type": "command",
+        "command": "${CLAUDE_PLUGIN_ROOT}/hooks-handlers/session-start.sh"
       }
     ]
   }

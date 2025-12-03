@@ -6,6 +6,8 @@
     "name": "pentaxis93",
     "email": "kcmdwrrya@mozmail.com"
   },
+  "repository": "https://github.com/pentaxis93/claude-code-plugins",
+  "homepage": "https://github.com/pentaxis93/claude-code-plugins#cosmic-janitor",
   "keywords": ["cosmic-janitor", "root-os"],
   "license": "MIT"
 }

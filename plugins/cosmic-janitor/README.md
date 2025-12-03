@@ -4,6 +4,11 @@
 
 **Warning:** This plugin radically alters Claude's output style. It stops the model from glazing and makes it focus on being useful.
 
+## Requirements
+
+- **Linux/macOS:** Works out of the box
+- **Windows:** Requires WSL or Git Bash (shell scripts are used for hooks)
+
 ## Installation
 
 ### 1. Add the Marketplace
