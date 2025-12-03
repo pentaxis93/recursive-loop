@@ -19,6 +19,7 @@ Execute the following tasks in order. Complete each task fully before moving to 
 **File:** `plugins/cosmic-janitor/EXAMPLES.md`
 
 **Issue:** Section 6 references "Sutra of the River" (lines 181, 202) which does not exist in the injected content. The actual injected content in `session-start.sh` contains these Sutras:
+
 - Sutra of the Structure
 - Sutra of the Vessel
 - Sutra of the Mu
@@ -32,6 +33,7 @@ Execute the following tasks in order. Complete each task fully before moving to 
 - Sutra of the Interface
 
 And these Protocols:
+
 - Protocol of the Commit
 - Protocol of Zero-Waste
 - Protocol of the Load
@@ -99,6 +101,7 @@ Do not debug the code; debug the state. Provide the artifact.
 ## Medium Priority Improvements
 
 **No medium priority issues found.** Previous remediation has already addressed:
+
 - Code block language tags (slash commands now use plain code blocks)
 - Schema references in all JSON files
 - Hook script portability notes
@@ -160,6 +163,7 @@ grep -q "cosmic-janitor@pentaxis93" README.md && echo "✓ Plugin install refere
 ```
 
 **Checklist:**
+
 - [ ] All JSON files parse without errors
 - [ ] Hook script outputs valid JSON with `hookSpecificOutput.additionalContext`
 - [ ] All referenced paths exist and session-start.sh is executable

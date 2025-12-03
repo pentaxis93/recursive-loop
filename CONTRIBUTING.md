@@ -3,6 +3,7 @@
 ## Philosophy
 
 Contributions must align with the Root Operating Mode:
+
 - **Signal over noise** - PRs that reduce friction
 - **Atomic changes** - One concern per PR
 - **Functional Honesty** - No decorative additions

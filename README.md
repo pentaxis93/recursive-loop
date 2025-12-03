@@ -16,7 +16,7 @@ A Claude Code plugin marketplace enforcing the **Root Operating Mode** through t
 
 Run this command in Claude Code to register the source:
 
-```
+```text
 /plugin marketplace add pentaxis93/claude-code-plugins
 ```
 
@@ -24,13 +24,13 @@ Run this command in Claude Code to register the source:
 
 Once the marketplace is added, install the plugin:
 
-```
+```text
 /plugin install cosmic-janitor@pentaxis93
 ```
 
 Alternatively, you can browse interactively:
 
-```
+```text
 /plugin
 # → Select "Browse Plugins" → Choose cosmic-janitor
 ```
@@ -42,6 +42,7 @@ Run `/reset` to start a fresh session. Test the transformation:
 **Input:** "Create a hello world function"
 
 **Expected (Janitor active):**
+
 ```javascript
 function hello() {
   console.log('Hello, World');
@@ -73,4 +74,5 @@ It is a prompt engineering technique, not a religion. Large Language Models play
 It is the polite fluff an AI generates before providing the solution (e.g., "Here is the code you requested..."). It wastes time and screen real estate. We garbage-collect it.
 
 ## License
+
 MIT
