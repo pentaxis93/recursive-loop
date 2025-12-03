@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
-
-# Output the Root OS mode instructions as additionalContext
+# session-start.sh - Claude Code SessionStart hook handler
+#
+# Purpose: Injects Root Operating System cosmology into new sessions
+# Output:  JSON with hookSpecificOutput.additionalContext
 # Updated: 2025-12-03
-# Philosophy: Essentialism (Functional Honesty)
+#
+# Called automatically by Claude Code when a session starts.
+# Do not modify JSON structure without updating hooks.json.
 
 cat << 'EOF'
 {

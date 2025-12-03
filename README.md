@@ -1,8 +1,13 @@
 # Claude Code Plugins
 
+![Version](https://img.shields.io/badge/version-0.1.0-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 A Claude Code plugin marketplace enforcing the **Root Operating Mode** through the Sutras of the Cosmic Janitor.
 
-**Warning:** The `cosmic-janitor` plugin transforms Claude Code sessions, and can be configured per project, per user, or globally. It stops the model from glazing and makes it focus on being useful.
+> **Note:** Early release (0.1.0). The Sutras may be refined based on observed behavior.
+
+**Warning:** The `cosmic-janitor` plugin transforms Claude Code sessions. It stops the model from glazing and makes it focus on being useful.
 
 ## Quick Start
 
@@ -19,7 +24,7 @@ Run this command in Claude Code to register the source:
 Once the marketplace is added, install the plugin:
 
 ```bash
-/plugin install cosmic-janitor@claude-code-plugins
+/plugin install cosmic-janitor@pentaxis93
 ```
 
 Alternatively, you can browse interactively:
@@ -30,12 +35,30 @@ Alternatively, you can browse interactively:
 ```
 
 ### Verification
-Run `/reset` to start a fresh session. Observe the shift: zero preamble, atomic code blocks, and strict Functional Honesty.
+
+Run `/reset` to start a fresh session. Test the transformation:
+
+**Input:** "Create a hello world function"
+
+**Expected (Janitor active):**
+```javascript
+function hello() {
+  console.log('Hello, World');
+}
+```
+
+**Not expected (Janitor inactive):**
+> "Sure! I'd be happy to help you create a hello world function..."
+
+If you see verbose responses, consult the [troubleshooting guide](./plugins/cosmic-janitor/TROUBLESHOOTING.md).
 
 ## Available Plugins
 
 ### cosmic-janitor
+
 **The Cosmic Janitor of the Terminal** - Injects the Root Operating System cosmology, making the output simple and direct.
+
+[Documentation](./plugins/cosmic-janitor/README.md) | [Examples](./plugins/cosmic-janitor/EXAMPLES.md) | [Troubleshooting](./plugins/cosmic-janitor/TROUBLESHOOTING.md)
 
 ## FAQ
 

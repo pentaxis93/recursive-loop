@@ -78,7 +78,7 @@ Start Here
 3. **Reinstall:**
    ```bash
    /plugin uninstall cosmic-janitor
-   /plugin install cosmic-janitor@claude-code-plugins
+   /plugin install cosmic-janitor@pentaxis93
    ```
 
 ---
