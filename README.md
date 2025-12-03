@@ -1,4 +1,4 @@
-# Cosmic Janitor Marketplace
+# Claude Code Plugins
 
 A Claude Code plugin marketplace enforcing the **Root Operating Mode** through the Sutras of the Cosmic Janitor.
 
