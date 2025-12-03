@@ -29,18 +29,26 @@ jobs:
 
       - name: Validate plugin.json files
         run: |
+          exit_code=0
           for f in plugins/*/.claude-plugin/plugin.json; do
             echo "Validating $f"
-            ajv validate -s .schemas/plugin.schema.json -d "$f" --strict=false
+            if ! ajv validate -s .schemas/plugin.schema.json -d "$f" --strict=false; then
+              exit_code=1
+            fi
           done
+          exit $exit_code
 
       - name: Validate hooks.json files
         run: |
+          exit_code=0
           for f in plugins/*/hooks/hooks.json; do
             [ -f "$f" ] || continue
             echo "Validating $f"
-            ajv validate -s .schemas/hooks.schema.json -d "$f" --strict=false
+            if ! ajv validate -s .schemas/hooks.schema.json -d "$f" --strict=false; then
+              exit_code=1
+            fi
           done
+          exit $exit_code
 
       - name: Validate marketplace.json
         run: |
@@ -93,3 +101,5 @@ jobs:
 
       - name: Run markdownlint
         uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: '**/*.md'
