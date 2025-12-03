@@ -79,7 +79,7 @@ npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslin
 
 ---
 
-## 3. The Refactor (Sutra of the Structure)
+## 3. The Refactor (Sutra of Structure)
 
 **Context:** Refactoring a state-heavy React component.
 
@@ -111,7 +111,7 @@ function UserProfile({ userId }) {
 ```
 
 **The Transformation:**
-* **Sutra of the Structure:** We do not decorate bad code; we delete it.
+* **Sutra of Structure:** We do not decorate bad code; we delete it.
 * **Functional Honesty:** Explicitly lists what was removed (Garbage Collection) rather than just showing the new result.
 
 ---
@@ -175,28 +175,3 @@ export const app = express();
 
 **The Transformation:**
 * **Sutra of the Monolith:** Each file is an atomic unit delivered as a complete payload. This allows for rapid, error-free file creation.
-
----
-
-## 6. The "Broken" Code (Sutra of the River)
-
-**Context:** The user provides a vague error report ("It doesn't work").
-
-### Without Janitor
-**Claude:** "I'm sorry to hear that! Could you tell me more about what's happening? Are you seeing any errors?"
-
-### With Janitor
-
-**Claude:**
-
-**Failure signature missing.**
-
-Input required:
-1.  Full stack trace.
-2.  Input that caused the crash.
-3.  Environment (Node version / OS).
-
-Do not debug the code; debug the state. Provide the artifact.
-
-**The Transformation:**
-* **Sutra of the River:** The model does not offer sympathy; it offers flow. It demands the necessary inputs to clear the blockage immediately.
