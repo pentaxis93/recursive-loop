@@ -12,6 +12,7 @@ Production without consumption is accumulation.
 Accumulation without pruning is entropy.
 
 The system produces artifacts:
+
 - Frameworks from `fuse`
 - Patterns from `fuse`
 - Permanent notes from `refine`
@@ -21,7 +22,8 @@ The system produces artifacts:
 But does it *use* them? Does it *learn* from them?
 
 This closes the loop:
-```
+
+```text
 Input → Process → Output → Execute
                               ↓
                     observe-system
@@ -43,7 +45,7 @@ Read `.claude/brain-config.json` to get `brainFolder` path.
 
 **Before Pass 1:** Check minimum corpus for meaningful observation.
 
-```
+```text
 If vault has:
   - < 5 frameworks in 05-Knowledge/consolidated/ OR
   - < 10 permanent notes OR
@@ -53,7 +55,7 @@ If vault has:
 
 **Output if guard fails:**
 
-```
+```text
 INSUFFICIENT_CORPUS
 
 The system needs time to produce artifacts before observation is meaningful.
@@ -72,7 +74,7 @@ Return when the system has more production history.
 
 ## Four-Pass System Observation
 
-```
+```text
 INVENTORY → TRACE → DIAGNOSE → PRESCRIBE
 ```
 
@@ -97,6 +99,7 @@ What has the system created?
 | Recon Reports | `Archives/Intelligence/recon/*.md` | `type: "recon"` |
 
 **For each artifact, extract:**
+
 - Path
 - Type
 - Created date (from frontmatter or file stat)
@@ -125,7 +128,7 @@ What has been used vs. what sits dormant?
 
 **Usage score calculation:**
 
-```
+```text
 usage_score = (
     backlinks_count * 2 +
     mentions_in_dumps * 1 +
@@ -135,12 +138,14 @@ usage_score = (
 ```
 
 **Temporal classification:**
+
 - Week 1-2: `fresh` (high activity expected)
 - Week 3-4: `stabilizing` (some references expected)
 - Week 5+: `mature` (should show sustained use or flag for review)
 
 **Track skill genealogy:**
-```
+
+```text
 Skill A (observe-self output)
   └── Referenced in Skill B creation
       └── Referenced in Skill C creation
@@ -171,7 +176,7 @@ What's failing?
 
 **System metrics to calculate:**
 
-```
+```text
 flow_score = (
     dumps_processed_to_permanent / dumps_created
 ) * (
@@ -182,6 +187,7 @@ flow_score = (
 Low flow score = knowledge bottleneck somewhere in pipeline.
 
 **Severity classification:**
+
 - **Critical:** Immediate attention (8+ week dormancy, flow_score < 0.2)
 - **Warning:** Review needed (4-8 week dormancy, orphans accumulating)
 - **Info:** Monitor (minor linking issues, early decay signals)
@@ -208,7 +214,7 @@ Transform observation into action.
 
 **Priority calculation:**
 
-```
+```text
 priority = (
     impact_if_fixed * 3 +
     effort_to_fix * -1 +
@@ -246,7 +252,7 @@ priority = (
 
 **File:** `{{brainFolder}}/Archives/Intelligence/system-health/observe-system-{{YYYY-MM-DD}}.md`
 
-```markdown
+````markdown
 ---
 type: "system-observation"
 date: "{{YYYY-MM-DD}}"
@@ -303,14 +309,14 @@ tags: ["#meta-cognition", "#system-health", "#observe-system"]
 
 ### Skill Genealogy
 
-```
+```text
 [skill A]
 └── spawned: [skill B], [skill C]
 ```
 
 ### Knowledge Flow
 
-```
+```text
 Dumps Created:    {{n}}
 Dumps Processed:  {{n}} ({{%}}%)
 → Permanent Notes: {{n}}
@@ -365,8 +371,8 @@ Flow Score: {{0.0-1.0}}
 
 ---
 
-*Observed {{n}} artifacts over {{n}} weeks | {{n}} issues detected | {{n}} prescriptions generated*
-```
+Observed {{n}} artifacts over {{n}} weeks | {{n}} issues detected | {{n}} prescriptions generated
+````
 
 ---
 
@@ -385,7 +391,7 @@ Flow Score: {{0.0-1.0}}
 The `system-pulse.sh` hook runs at SessionStart and provides light awareness.
 This full skill is for deep periodic analysis.
 
-```
+```text
 Pulse (every session) → flags issues → triggers observe-system (monthly)
 ```
 
