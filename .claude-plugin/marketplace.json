@@ -20,6 +20,12 @@
       "source": "./plugins/construct",
       "version": "0.1.0",
       "description": "Downloadable cognitive programs for Claude Code"
+    },
+    {
+      "name": "second-brain",
+      "source": "./plugins/second-brain",
+      "version": "0.1.0",
+      "description": "Knowledge capture and intelligence extraction for Obsidian-based systems"
     }
   ],
   "keywords": [

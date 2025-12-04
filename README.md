@@ -46,6 +46,24 @@ Current programs:
 
 [Documentation](./plugins/construct/README.md)
 
+### second-brain
+
+**Knowledge capture and intelligence extraction** — Full knowledge lifecycle for Obsidian-based second brain systems.
+
+Skills:
+
+- `dump` — Stream-of-consciousness capture with domain classification
+- `refine` — Raw captures to atomic permanent notes
+- `fuse` — Framework synthesis from scattered insights
+- `recon` — Verified intelligence extraction (7-day freshness)
+- `debrief` — Weekly pattern analysis and reflection
+
+Commands:
+
+- `/setup` — Configure vault with PARA structure
+
+[Documentation](./plugins/second-brain/README.md)
+
 ## FAQ
 
 **What's a cosmic janitor?**

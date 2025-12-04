@@ -1,0 +1,30 @@
+{
+  "name": "second-brain",
+  "version": "0.1.0",
+  "description": "Knowledge capture and intelligence extraction for Obsidian-based systems",
+  "author": {
+    "name": "pentaxis93",
+    "email": "kcmdwrrya@mozmail.com",
+    "url": "https://github.com/pentaxis93"
+  },
+  "repository": "https://github.com/pentaxis93/claude-code-plugins",
+  "homepage": "https://github.com/pentaxis93/claude-code-plugins#second-brain",
+  "keywords": [
+    "second-brain",
+    "obsidian",
+    "knowledge-management",
+    "zettelkasten",
+    "para",
+    "intelligence",
+    "atomic-notes"
+  ],
+  "license": "MIT",
+  "components": {
+    "hooks": "./hooks/hooks.json",
+    "commands": "./commands",
+    "skills": "./skills"
+  },
+  "engines": {
+    "claude-code": ">=1.0.0"
+  }
+}
