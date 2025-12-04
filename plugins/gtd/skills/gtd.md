@@ -29,7 +29,8 @@ If missing: "Run /setup first."
 **Trigger:** "process inbox", "clarify captures", "inbox zero"
 
 ### Scan
-```
+
+```text
 {{brainFolder}}/00-Inbox/Daily/
 {{brainFolder}}/00-Inbox/Fleeting-Notes/
 ```
@@ -68,6 +69,7 @@ Delete processed capture blocks. Delete empty files.
 ### Project Review
 
 Scan `01-Projects/` for `status: active`:
+
 - Has next action? If no → flag
 - Stalled >7d? → flag
 - Done? → Archive to `Archives/Completed/`
@@ -85,6 +87,7 @@ Inbox items ≥5? → Offer to process first.
 ### Gather
 
 Scan for tasks (not #someday, not #waiting):
+
 - `01-Projects/` (status: active)
 - `02-Areas/`
 - `02-Areas/Relationships/`
@@ -101,6 +104,7 @@ Scan for tasks (not #someday, not #waiting):
 ### Output
 
 Create `{{brainFolder}}/Archives/Daily Plans/{{YYYY-MM-DD}}.md`:
+
 - Focus statement (top 3 priorities)
 - Tasks plugin queries by context (@Computer, @Phone, @Home, @Errands, @Anywhere)
 - Quick wins query (#time/5m, #time/15m)
@@ -130,6 +134,7 @@ Inbox items ≥5? → Offer to process first.
 Ask: "Focus for tomorrow?"
 
 Create draft: `{{brainFolder}}/Archives/Daily Plans/{{tomorrow}}.md`
+
 - User's stated focus
 - Same query structure as PLAN
 - Status: draft

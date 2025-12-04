@@ -11,6 +11,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 1. **File:** `{{brainFolder}}/00-Inbox/captures/{{YYYY-MM-DD}}.md`
 
 2. **If missing, create:**
+
    ```markdown
    ---
    title: "Daily Inbox - {{YYYY-MM-DD}}"
@@ -21,6 +22,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
    ```
 
 3. **Append:**
+
    ```markdown
    ### {{HH:mm}}
 
