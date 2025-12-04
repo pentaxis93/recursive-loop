@@ -1,0 +1,28 @@
+{
+  "name": "construct",
+  "version": "0.1.0",
+  "description": "Downloadable cognitive programs for Claude Code",
+  "author": {
+    "name": "pentaxis93",
+    "email": "kcmdwrrya@mozmail.com",
+    "url": "https://github.com/pentaxis93"
+  },
+  "repository": "https://github.com/pentaxis93/claude-code-plugins",
+  "homepage": "https://github.com/pentaxis93/claude-code-plugins#construct",
+  "keywords": [
+    "construct",
+    "skills",
+    "meta-cognition",
+    "self-observation",
+    "fourth-way",
+    "skill-extraction",
+    "topology-extraction"
+  ],
+  "license": "MIT",
+  "components": {
+    "skills": "./skills"
+  },
+  "engines": {
+    "claude-code": ">=1.0.0"
+  }
+}
