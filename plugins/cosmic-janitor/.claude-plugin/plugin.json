@@ -15,6 +15,5 @@
     "persona",
     "prompt-engineering"
   ],
-  "license": "MIT",
-  "hooks": "./hooks/hooks.json"
+  "license": "MIT"
 }
