@@ -4,63 +4,47 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Code](https://img.shields.io/badge/claude--code-%3E%3D1.0.0-purple)
 
-A Claude Code plugin marketplace enforcing the **Root Operating Mode** through the Sutras of the Cosmic Janitor.
-
-> **Note:** Early release (0.1.0). The Sutras may be refined based on observed behavior.
-
-**Warning:** The `cosmic-janitor` plugin transforms Claude Code sessions. It stops the model from glazing and makes it focus on being useful.
+A Claude Code plugin marketplace.
 
 ## Quick Start
 
 ### 1. Add the Marketplace
 
-Run this command in Claude Code to register the source:
-
 ```text
 /plugin marketplace add pentaxis93/claude-code-plugins
 ```
 
-### 2. Install the Plugin
-
-Once the marketplace is added, install the plugin:
+### 2. Install a Plugin
 
 ```text
 /plugin install cosmic-janitor@pentaxis93
+/plugin install construct@pentaxis93
 ```
 
-Alternatively, you can browse interactively:
+Or browse interactively:
 
 ```text
 /plugin
-# → Select "Browse Plugins" → Choose cosmic-janitor
+# → Select "Browse Plugins"
 ```
-
-### Verification
-
-Exit Claude Code and start a new session. Test the transformation:
-
-**Input:** "Create a hello world function"
-
-**Expected (Janitor active):**
-
-```javascript
-function hello() {
-  console.log('Hello, World');
-}
-```
-
-**Not expected (Janitor inactive):**
-> "Sure! I'd be happy to help you create a hello world function..."
-
-If you see verbose responses, consult the [troubleshooting guide](./plugins/cosmic-janitor/TROUBLESHOOTING.md).
 
 ## Available Plugins
 
 ### cosmic-janitor
 
-**The Cosmic Janitor of the Terminal** - Injects the Root Operating System cosmology, making the output simple and direct.
+**The Cosmic Janitor of the Terminal** — Injects the Root Operating System cosmology, making output simple and direct. Stops the model from glazing.
 
 [Documentation](./plugins/cosmic-janitor/README.md) | [Examples](./plugins/cosmic-janitor/EXAMPLES.md) | [Troubleshooting](./plugins/cosmic-janitor/TROUBLESHOOTING.md)
+
+### construct
+
+**The loading space** — Downloadable cognitive programs for Claude Code.
+
+Current programs:
+
+- `observe-self` — Four-pass topology extraction for encoding cognitive methods as skills
+
+[Documentation](./plugins/construct/README.md)
 
 ## FAQ
 
@@ -72,6 +56,9 @@ It is a prompt engineering technique, not a religion. Large Language Models play
 
 **What is "glazing"?**
 It is the polite fluff an AI generates before providing the solution (e.g., "Here is the code you requested..."). It wastes time and screen real estate. We garbage-collect it.
+
+**What's a construct?**
+The white loading space from The Matrix where operators could upload any program directly into a human mind. "I know kung fu." The construct is a container for downloadable cognitive programs—skills that can be loaded into Claude Code on demand.
 
 ## License
 
