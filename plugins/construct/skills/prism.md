@@ -22,7 +22,7 @@ Prism splits the beam. Each lens reveals what others miss.
 
 ## Three-Phase Protocol
 
-```
+```text
 RECON → EXTRACT → INTEGRATE
 ```
 
@@ -97,7 +97,7 @@ Process sequentially through selected lenses. Each lens asks different questions
 
 When multiple lenses selected, process in this sequence:
 
-```
+```text
 1. Actionable   (days)
 2. Timeline     (days-weeks)
 3. Relationship (days-weeks)
@@ -117,6 +117,7 @@ When multiple lenses selected, process in this sequence:
 ### 1. Actionable Lens
 
 **Questions:**
+
 - What needs to be done?
 - What's the desired outcome?
 - What's the next physical action?
@@ -124,6 +125,7 @@ When multiple lenses selected, process in this sequence:
 **Extract:** Tasks with context tags, time estimates, priority
 
 **Format:**
+
 ```markdown
 - [ ] {{action}} @{{context}} ~{{time}} {{priority}}
 ```
@@ -133,6 +135,7 @@ When multiple lenses selected, process in this sequence:
 ### 2. Timeline Lens
 
 **Questions:**
+
 - What's urgent?
 - What are the deadlines?
 - What's time-sensitive?
@@ -144,6 +147,7 @@ When multiple lenses selected, process in this sequence:
 ### 3. Relationship Lens
 
 **Questions:**
+
 - Who is mentioned?
 - What commitments were made?
 - What needs follow-up?
@@ -157,6 +161,7 @@ When multiple lenses selected, process in this sequence:
 ### 4. Decision Lens
 
 **Questions:**
+
 - What was decided?
 - What were the options?
 - What was the reasoning?
@@ -164,6 +169,7 @@ When multiple lenses selected, process in this sequence:
 **Extract:** Decision records with context, tradeoffs, rationale
 
 **Format:**
+
 ```markdown
 ## Decision: {{title}}
 **Decided:** {{choice}}
@@ -177,6 +183,7 @@ When multiple lenses selected, process in this sequence:
 ### 5. Content Lens
 
 **Questions:**
+
 - What themes emerge?
 - What ideas are worth developing?
 - What could become content?
@@ -190,6 +197,7 @@ When multiple lenses selected, process in this sequence:
 ### 6. Learning Lens
 
 **Questions:**
+
 - What did I learn?
 - What questions emerged?
 - What knowledge gaps exist?
@@ -203,6 +211,7 @@ When multiple lenses selected, process in this sequence:
 ### 7. Resource Lens
 
 **Questions:**
+
 - What tools were mentioned?
 - What resources are needed?
 - What references were cited?
@@ -216,6 +225,7 @@ When multiple lenses selected, process in this sequence:
 ### 8. Strategic Lens
 
 **Questions:**
+
 - What's the big picture?
 - What frameworks apply?
 - What context informs future decisions?
@@ -223,6 +233,7 @@ When multiple lenses selected, process in this sequence:
 **Extract:** Strategic reference notes, framework documentation
 
 **Format:**
+
 ```markdown
 ## Strategic Context: {{topic}}
 **Landscape:** {{situation}}
@@ -237,6 +248,7 @@ When multiple lenses selected, process in this sequence:
 ### 9. Pattern Lens
 
 **Questions:**
+
 - What recurs?
 - What themes keep appearing?
 - What cross-cuts domains?
@@ -250,6 +262,7 @@ When multiple lenses selected, process in this sequence:
 ### 10. Emotional Lens
 
 **Questions:**
+
 - What excites?
 - What drains?
 - What worries?
@@ -286,6 +299,7 @@ After all lenses complete:
 ## Lens Synergies
 
 **Pairs well:**
+
 - Actionable + Timeline (tasks with urgency)
 - Relationship + Actionable (people-linked tasks)
 - Decision + Strategic (choice with context)
@@ -293,6 +307,7 @@ After all lenses complete:
 - Learning + Resource (insights with materials)
 
 **Overlaps:**
+
 - Actionable ↔ Timeline (both temporal)
 - Content ↔ Learning (both extract ideas)
 - Strategic ↔ Decision (both about choices)
