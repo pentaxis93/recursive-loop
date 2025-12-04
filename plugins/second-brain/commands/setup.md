@@ -165,7 +165,7 @@ Suggest next steps based on installed plugins.
 
 **File:** `_system/gtd-dashboard.md`
 
-```markdown
+````markdown
 ---
 type: "dashboard"
 system: "gtd"
@@ -200,7 +200,7 @@ Check 00-Inbox/ for unprocessed items
 ---
 
 Updated by GTD skill
-```
+````
 
 ### 2. Create Standard Areas
 
