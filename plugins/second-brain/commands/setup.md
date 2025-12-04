@@ -207,6 +207,7 @@ Updated by GTD skill
 Create in `{{brainFolder}}/02-Areas/` (skip if exists):
 
 **Career-Development.md:**
+
 ```markdown
 ---
 title: "Career Development"
