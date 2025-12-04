@@ -19,8 +19,5 @@
   ],
   "license": "MIT",
   "commands": "./commands",
-  "skills": "./skills",
-  "dependencies": {
-    "plugins": ["second-brain"]
-  }
+  "skills": "./skills"
 }

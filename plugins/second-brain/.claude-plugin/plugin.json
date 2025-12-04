@@ -19,7 +19,6 @@
     "atomic-notes"
   ],
   "license": "MIT",
-  "hooks": "./hooks/hooks.json",
   "commands": "./commands",
   "skills": "./skills"
 }
