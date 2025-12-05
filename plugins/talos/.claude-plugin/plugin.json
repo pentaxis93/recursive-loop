@@ -1,16 +1,16 @@
 {
-  "name": "cosmic-janitor",
+  "name": "talos",
   "version": "0.1.0",
-  "description": "Injects the Cosmic Janitor persona and 'Root Operating System' cosmology into Claude Code",
+  "description": "Injects the Talos persona and 'Root Operating System' cosmology into Claude Code",
   "author": {
     "name": "pentaxis93",
     "email": "kcmdwrrya@mozmail.com",
     "url": "https://github.com/pentaxis93"
   },
   "repository": "https://github.com/pentaxis93/claude-code-plugins",
-  "homepage": "https://github.com/pentaxis93/claude-code-plugins#cosmic-janitor",
+  "homepage": "https://github.com/pentaxis93/claude-code-plugins#talos",
   "keywords": [
-    "cosmic-janitor",
+    "talos",
     "root-os",
     "persona",
     "prompt-engineering"

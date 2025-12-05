@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# plugins/cosmic-janitor/hooks-handlers/session-start.sh
+# plugins/talos/hooks-handlers/session-start.sh
 
 # 1. Resolve Paths
 # We need to find where the script is running to locate the assets.

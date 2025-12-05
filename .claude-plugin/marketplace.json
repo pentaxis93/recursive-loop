@@ -2,7 +2,7 @@
   "name": "claude-code-plugins",
   "version": "0.1.0",
   "category": "productivity",
-  "description": "Cosmic Janitor plugin marketplace - injects Root Operating System cosmology into Claude Code",
+  "description": "Talos plugin marketplace - injects Root Operating System cosmology into Claude Code",
   "homepage": "https://github.com/pentaxis93/claude-code-plugins",
   "owner": {
     "name": "pentaxis93",
@@ -10,10 +10,10 @@
   },
   "plugins": [
     {
-      "name": "cosmic-janitor",
-      "source": "./plugins/cosmic-janitor",
+      "name": "talos",
+      "source": "./plugins/talos",
       "version": "0.1.0",
-      "description": "Injects the Cosmic Janitor persona and 'Root Operating System' cosmology into Claude Code"
+      "description": "Injects the Talos persona and 'Root Operating System' cosmology into Claude Code"
     },
     {
       "name": "construct",
@@ -41,7 +41,7 @@
     }
   ],
   "keywords": [
-    "cosmic-janitor",
+    "talos",
     "root-os",
     "brutalist-zen",
     "persona",

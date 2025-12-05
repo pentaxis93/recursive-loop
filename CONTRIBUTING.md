@@ -34,11 +34,11 @@ Before submitting:
 ```bash
 # Validate JSON
 jq . .claude-plugin/marketplace.json
-jq . plugins/cosmic-janitor/.claude-plugin/plugin.json
-jq . plugins/cosmic-janitor/hooks/hooks.json
+jq . plugins/talos/.claude-plugin/plugin.json
+jq . plugins/talos/hooks/hooks.json
 
 # Test the hook script
-./plugins/cosmic-janitor/hooks-handlers/session-start.sh | jq .
+./plugins/talos/hooks-handlers/session-start.sh | jq .
 ```
 
 ## License
