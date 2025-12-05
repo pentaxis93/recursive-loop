@@ -26,6 +26,7 @@ Read:
 **Use WebSearch tool** to find news based on user's interest profile. Focus on strategic relevance.
 
 For each interest topic and watchlist item:
+
 1. Construct search query with "December 2025" or current month/year
 2. Execute WebSearch
 3. Extract relevant results

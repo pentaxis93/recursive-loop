@@ -14,6 +14,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 Check `_system/profile.md` exists. If not: prompt for /setup.
 
 Read:
+
 - `_system/profile.md` → name, role, active projects
 - `_system/gtd-dashboard.md` → current focus, recent activity
 
@@ -22,6 +23,7 @@ Read:
 ### 1. Inbox Status
 
 Scan `{{brainFolder}}/00-Inbox/`:
+
 - Count files in `captures/`
 - Count files in `dumps/` or `braindumps/`
 - Report status:
@@ -32,6 +34,7 @@ Scan `{{brainFolder}}/00-Inbox/`:
 ### 2. Project Survey
 
 Scan `{{brainFolder}}/01-Projects/`:
+
 - Count active projects (status: active)
 - Count open tasks per project (unchecked `- [ ]`)
 - Identify HIGH priority projects (⏫ or high: prefix)
@@ -41,6 +44,7 @@ Scan `{{brainFolder}}/01-Projects/`:
 ### 3. Area Assessment
 
 Scan `{{brainFolder}}/02-Areas/`:
+
 - Count area files
 - Count relationship files in `Relationships/`
 - Identify open tasks per area
@@ -49,17 +53,20 @@ Scan `{{brainFolder}}/02-Areas/`:
 ### 4. Knowledge Assets
 
 Survey `{{brainFolder}}/05-Knowledge/`:
+
 - Count frameworks in `consolidated/`
 - Count patterns in `patterns/`
 - Note recent additions (modified <7 days)
 
 Survey `{{brainFolder}}/Permanent Notes/`:
+
 - Count permanent notes
 - Identify orphaned notes (fewer than 3 links)
 
 ### 5. Recent Activity
 
 Read `_system/gtd-dashboard.md`:
+
 - Extract today's focus
 - Extract recent completions
 - Note deferred work
@@ -70,16 +77,19 @@ Read `_system/gtd-dashboard.md`:
 Identify and categorize by severity:
 
 **HIGH:**
+
 - Projects without next actions
 - Tasks due within 3 days
 - Inbox RED status
 
 **MEDIUM:**
+
 - Completed projects not archived
 - Deferred high-priority work
 - Tasks due within 7 days
 
 **LOW:**
+
 - Stale projects (>7 days no activity)
 - Orphaned permanent notes
 - Inbox YELLOW status
@@ -89,21 +99,25 @@ Identify and categorize by severity:
 Generate actionable recommendations:
 
 **IMMEDIATE (Today/Tomorrow):**
+
 - Archive completed projects
 - Process RED inbox items
 - Address overdue tasks
 
 **SHORT-TERM (This Week):**
+
 - Review stalled projects
 - Process YELLOW inbox
 - Follow up on waiting items
 
 **MEDIUM-TERM (Next Week):**
+
 - Knowledge consolidation candidates
 - Project milestone reviews
 - Area responsibility checks
 
 **STRATEGIC:**
+
 - System pattern observations
 - Workflow improvement suggestions
 - Capacity/energy notes
@@ -113,16 +127,19 @@ Generate actionable recommendations:
 Assess overall health metrics:
 
 **GTD Compliance:**
+
 - Inbox empty? (Y/N)
 - Single source of truth maintained? (Y/N)
 - Every project has next action? (Y/N)
 
 **Organizational Integrity:**
+
 - PARA structure intact? (Y/N)
 - Zettelkasten linking active? (Y/N)
 - Recent consolidation work? (Y/N)
 
 **Processing Rhythm:**
+
 - Daily processing occurring? (Y/N)
 - Weekly review happening? (Y/N)
 - Dashboard current? (Y/N)
