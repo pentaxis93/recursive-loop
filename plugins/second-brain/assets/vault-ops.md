@@ -223,3 +223,19 @@ When executing skills:
 - `fuse` → Consolidates permanents → frameworks in `05-knowledge/`
 
 All skills must follow these canonical rules for frontmatter, linking, and file placement.
+
+---
+
+## Talos Administration
+
+System configuration lives in `02-areas/` as ordinary area notes, linked from the Talos-Administration area hub.
+
+| File | Purpose | Update Rhythm |
+|------|---------|---------------|
+| `02-areas/Talos-Administration.md` | Area hub for AI collaboration | As needed |
+| `02-areas/Profile.md` | Identity, goals, priorities | Quarterly |
+| `02-areas/Interests.md` | Topics for intel gathering | Weekly (debrief) |
+| `02-areas/Watchlist.md` | Entities to track | Weekly (debrief) |
+| `02-areas/GTD-Dashboard.md` | Daily engagement state | Daily (automatic) |
+
+Skills read these files via `{{brainFolder}}/02-areas/` paths.

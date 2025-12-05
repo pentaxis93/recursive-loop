@@ -11,13 +11,13 @@ Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight
 
-Check `_system/profile.md` and `_system/interests.md` exist. If not: prompt for /setup.
+Check `{{brainFolder}}/02-areas/Profile.md` and `{{brainFolder}}/02-areas/Interests.md` exist. If not: prompt for /setup.
 
 Read:
 
-- `_system/profile.md` → name, role, active projects
-- `_system/interests.md` → topics, preferred sources
-- `_system/watchlist.md` (optional) → companies/people to track
+- `{{brainFolder}}/02-areas/Profile.md` → name, role, active projects
+- `{{brainFolder}}/02-areas/Interests.md` → topics, preferred sources
+- `{{brainFolder}}/02-areas/Watchlist.md` (optional) → companies/people to track
 
 ## Execute
 

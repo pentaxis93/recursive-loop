@@ -11,12 +11,12 @@ Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight
 
-Check `_system/profile.md` exists. If not: prompt for /setup.
+Check `{{brainFolder}}/02-areas/Profile.md` exists. If not: prompt for /setup.
 
 Read:
 
-- `_system/profile.md` → name, role, active projects
-- `_system/gtd-dashboard.md` → current focus, recent activity
+- `{{brainFolder}}/02-areas/Profile.md` → name, role, active projects
+- `{{brainFolder}}/02-areas/GTD-Dashboard.md` → current focus, recent activity
 
 ## Execute
 
@@ -65,7 +65,7 @@ Survey `{{brainFolder}}/permanent-notes/`:
 
 ### 5. Recent Activity
 
-Read `_system/gtd-dashboard.md`:
+Read `{{brainFolder}}/02-areas/GTD-Dashboard.md`:
 
 - Extract today's focus
 - Extract recent completions

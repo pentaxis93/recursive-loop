@@ -8,7 +8,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight
 
-Check `_system/profile.md` exists. If not: prompt for /setup.
+Check `{{brainFolder}}/02-areas/Profile.md` exists. If not: prompt for /setup.
 
 ## Execute
 

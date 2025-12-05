@@ -109,7 +109,7 @@ Create `{{brainFolder}}/archives/daily-plans/{{YYYY-MM-DD}}.md`:
 - Quick wins query (#time/5m, #time/15m)
 - Waiting-on query (#waiting)
 
-Update `_system/gtd-dashboard.md` with today's focus.
+Update `{{brainFolder}}/02-areas/GTD-Dashboard.md` with today's focus.
 
 ---
 
@@ -138,7 +138,7 @@ Create draft: `{{brainFolder}}/archives/daily-plans/{{tomorrow}}.md`
 - Same query structure as PLAN
 - Status: draft
 
-Update `_system/gtd-dashboard.md`.
+Update `{{brainFolder}}/02-areas/GTD-Dashboard.md`.
 
 ---
 

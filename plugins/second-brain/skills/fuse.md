@@ -8,7 +8,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight
 
-Check `_system/profile.md` exists. If not: prompt for /setup.
+Check `{{brainFolder}}/02-areas/Profile.md` exists. If not: prompt for /setup.
 
 ## Execute
 
@@ -80,7 +80,7 @@ tags: ["#framework", "#consolidated", "#{{topic}}"]
 
 **Evidence:**
 - [[dump-YYYY-MM-DD]] - {{insight}}
-- [[recon-YYYY-MM-DD]] - {{evidence}}
+- [[intel-YYYY-MM-DD]] - {{evidence}}
 
 **Confidence:** {{High|Medium|Low}} - {{reasoning}}
 
@@ -284,7 +284,7 @@ tags: ["#moc", "#knowledge"]
 
 If framework mentions "strategic", "goal", "priority" or supports stated goals:
 
-Add to `_system/profile.md` under `## Active Knowledge Frameworks`:
+Add to `{{brainFolder}}/02-areas/Profile.md` under `## Active Knowledge Frameworks`:
 
 ```markdown
 ### [[framework]]

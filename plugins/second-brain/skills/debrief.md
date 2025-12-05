@@ -8,7 +8,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight
 
-Check `_system/profile.md` exists. If found:
+Check `{{brainFolder}}/02-areas/Profile.md` exists. If found:
 
 - Read user's name for personalization
 - Read active projects to review
@@ -96,7 +96,7 @@ tags: ["#debrief", "#reflection", "#planning"]
 domains: ["personal", "professional", "projects"]
 rating: {{1-5}}
 dumps_reviewed: {{count}}
-recons_reviewed: {{count}}
+intel_reviewed: {{count}}
 ---
 
 # Debrief - Week of {{Date}}
@@ -204,7 +204,7 @@ Next week is successful if:
 
 ## Analysis
 
-**Documents reviewed:** {{count}} dumps, {{count}} recons
+**Documents reviewed:** {{count}} dumps, {{count}} intel reports
 
 **Dominant themes:** {{themes}}
 

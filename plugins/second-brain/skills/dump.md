@@ -8,7 +8,7 @@ Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight
 
-Check `_system/profile.md` exists. If not: prompt for /setup.
+Check `{{brainFolder}}/02-areas/Profile.md` exists. If not: prompt for /setup.
 
 ## Execute
 
@@ -75,7 +75,7 @@ status: "captured"
 
 ### 5. Competitive Intel (if watchlist exists)
 
-If `_system/watchlist.md` exists and input mentions tracked entities:
+If `{{brainFolder}}/02-areas/Watchlist.md` exists and input mentions tracked entities:
 
 Create/update: `{{brainFolder}}/01-projects/{{project}}/competitive/{{company}}.md`
 
