@@ -35,7 +35,7 @@ The setup command (from second-brain) detects gtd and creates:
 
 - `_system/gtd-dashboard.md`
 - Standard areas (Career, Health, Personal, Errands, Home)
-- GTD inbox structure (captures/)
+- GTD inbox structure
 
 Already ran `/setup` before installing gtd? Run it again — it's idempotent and will add the missing GTD structure.
 

@@ -22,10 +22,10 @@ Read:
 
 ### 1. Inbox Status
 
-Scan `{{brainFolder}}/00-Inbox/`:
+Scan `{{brainFolder}}/00-inbox/`:
 
-- Count files in `captures/`
-- Count files in `dumps/` or `braindumps/`
+- Count capture files (flat in inbox)
+- Count files in `dumps/`
 - Report status:
   - GREEN: Empty (GTD compliant)
   - YELLOW: 1-4 items (needs processing)
@@ -33,7 +33,7 @@ Scan `{{brainFolder}}/00-Inbox/`:
 
 ### 2. Project Survey
 
-Scan `{{brainFolder}}/01-Projects/`:
+Scan `{{brainFolder}}/01-projects/`:
 
 - Count active projects (status: active)
 - Count open tasks per project (unchecked `- [ ]`)
@@ -43,22 +43,22 @@ Scan `{{brainFolder}}/01-Projects/`:
 
 ### 3. Area Assessment
 
-Scan `{{brainFolder}}/02-Areas/`:
+Scan `{{brainFolder}}/02-areas/`:
 
 - Count area files
-- Count relationship files in `Relationships/`
+- Count relationship files in `relationships/`
 - Identify open tasks per area
 - Note waiting-on items (#waiting tag)
 
 ### 4. Knowledge Assets
 
-Survey `{{brainFolder}}/05-Knowledge/`:
+Survey `{{brainFolder}}/05-knowledge/`:
 
 - Count frameworks in `consolidated/`
 - Count patterns in `patterns/`
 - Note recent additions (modified <7 days)
 
-Survey `{{brainFolder}}/Permanent Notes/`:
+Survey `{{brainFolder}}/permanent-notes/`:
 
 - Count permanent notes
 - Identify orphaned notes (fewer than 3 links)
@@ -146,7 +146,7 @@ Assess overall health metrics:
 
 ### 9. Output
 
-**File:** `{{brainFolder}}/Archives/Intelligence/audit/audit-{{YYYY-MM-DD}}.md`
+**File:** `{{brainFolder}}/archives/intelligence/audit/audit-{{YYYY-MM-DD}}.md`
 
 ```markdown
 ---
@@ -183,7 +183,7 @@ tags:
 
 ### I. Inbox Status {{GREEN/YELLOW/RED}}
 
-**Location:** `{{brainFolder}}/00-Inbox/`
+**Location:** `{{brainFolder}}/00-inbox/`
 
 - **Captures:** {{count}}
 - **Dumps:** {{count}}
@@ -226,9 +226,9 @@ tags:
 
 ### IV. Knowledge Assets
 
-**Frameworks:** {{count}} in `05-Knowledge/consolidated/`
-**Patterns:** {{count}} in `05-Knowledge/patterns/`
-**Permanent Notes:** {{count}}
+**Frameworks:** {{count}} in `05-knowledge/consolidated/`
+**Patterns:** {{count}} in `05-knowledge/patterns/`
+**Permanent notes:** {{count}}
 **Recent Additions:** {{list items modified <7 days}}
 
 ---

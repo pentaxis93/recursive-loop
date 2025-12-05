@@ -76,7 +76,7 @@ For each interest topic and watchlist item:
 
 ### 4. Output
 
-**File:** `{{brainFolder}}/Archives/Intelligence/intel/intel-{{YYYY-MM-DD}}.md`
+**File:** `{{brainFolder}}/archives/intelligence/intel/intel-{{YYYY-MM-DD}}.md`
 
 ```markdown
 ---

@@ -22,10 +22,10 @@ Scan recent files from past week:
 
 | Location | Content |
 |----------|---------|
-| `Archives/Intelligence/recon/` | Recon reports |
-| `00-Inbox/dumps/` | Dumps |
-| `01-Projects/*/dumps/` | Project dumps |
-| `Archives/Intelligence/checkins/` | Previous debriefs |
+| `archives/intelligence/intel/` | Intel reports |
+| `00-inbox/dumps/` | Dumps |
+| `01-projects/*/dumps/` | Project dumps |
+| `archives/intelligence/checkins/` | Previous debriefs |
 
 ### 2. Guided Reflection
 
@@ -83,7 +83,7 @@ Lead through reflection questions. Conversational, not clinical.
 
 ### 3. Output
 
-**File:** `{{brainFolder}}/Archives/Intelligence/checkins/debrief-{{YYYY-MM-DD}}.md`
+**File:** `{{brainFolder}}/archives/intelligence/checkins/debrief-{{YYYY-MM-DD}}.md`
 
 ```markdown
 ---

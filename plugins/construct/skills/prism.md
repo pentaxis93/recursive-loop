@@ -154,7 +154,7 @@ When multiple lenses selected, process in this sequence:
 
 **Extract:** People-linked tasks, waiting-on items, relationship notes
 
-**Route:** `02-Areas/Relationships/{{person}}.md`
+**Route:** `02-areas/relationships/{{person}}.md`
 
 ---
 
@@ -218,7 +218,7 @@ When multiple lenses selected, process in this sequence:
 
 **Extract:** Resource notes, tool evaluations, reading lists
 
-**Route:** `03-Resources/`
+**Route:** `03-resources/reference-notes/`
 
 ---
 
@@ -255,7 +255,7 @@ When multiple lenses selected, process in this sequence:
 
 **Extract:** Pattern notes, recurring themes
 
-**Route:** `05-Knowledge/patterns/`
+**Route:** `05-knowledge/patterns/`
 
 ---
 

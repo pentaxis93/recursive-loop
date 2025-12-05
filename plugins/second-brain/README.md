@@ -100,12 +100,12 @@ Fuse scattered insights into frameworks through pattern synthesis.
 1. Gather unprocessed dumps and recon reports
 2. Detect patterns (frequency, temporal, domain, contradiction)
 3. Synthesize frameworks with principles and applications
-4. Output to `05-Knowledge/` (frameworks, patterns, timelines)
+4. Output to `05-knowledge/` (frameworks, patterns, timelines)
 5. Delete processed dumps (GTD canon)
 6. Route tasks to Zettelkasten/projects
 7. Integrate links and update MOC
 
-**Requires:** `_system/profile.md`, processed dumps in `00-Inbox/dumps/` or `01-Projects/*/dumps/`
+**Requires:** `_system/profile.md`, processed dumps in `00-inbox/dumps/` or `01-projects/*/dumps/`
 
 ### refine
 
@@ -121,7 +121,7 @@ Process raw captures into atomic permanent notes with proper linking.
 6. Create reference notes for rich sources
 7. Archive or delete processed sources
 
-**Requires:** Raw content in `00-Inbox/` or `00-Inbox/dumps/`
+**Requires:** Raw content in `00-inbox/` or `00-inbox/dumps/`
 
 ### debrief
 

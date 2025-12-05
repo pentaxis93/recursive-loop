@@ -49,10 +49,10 @@ else
 fi
 
 # 5. Count artifacts
-FRAMEWORKS_DIR="$VAULT_PATH/05-Knowledge/consolidated"
-PATTERNS_DIR="$VAULT_PATH/05-Knowledge/patterns"
-HEALTH_DIR="$VAULT_PATH/Archives/Intelligence/system-health"
-PERMANENT_DIR="$VAULT_PATH/Permanent Notes"
+FRAMEWORKS_DIR="$VAULT_PATH/05-knowledge/consolidated"
+PATTERNS_DIR="$VAULT_PATH/05-knowledge/patterns"
+HEALTH_DIR="$VAULT_PATH/archives/intelligence/system-health"
+PERMANENT_DIR="$VAULT_PATH/permanent-notes"
 
 FRAMEWORK_COUNT=0
 PATTERN_COUNT=0

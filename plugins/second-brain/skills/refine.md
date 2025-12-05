@@ -18,9 +18,9 @@ Scan for unprocessed content:
 
 | Location | Type |
 |----------|------|
-| `00-Inbox/dumps/` | Raw dumps |
-| `00-Inbox/` | Fleeting notes |
-| `01-Projects/*/dumps/` | Project dumps |
+| `00-inbox/dumps/` | Raw dumps |
+| `00-inbox/` | Fleeting notes |
+| `01-projects/*/dumps/` | Project dumps |
 
 Identify items with `status: "captured"` or `#status/fleeting`.
 
@@ -57,7 +57,7 @@ If not exists:
 
 ### 4. Create Permanent Notes
 
-**Location:** `{{brainFolder}}/Permanent Notes/` or `05-Knowledge/`
+**Location:** `{{brainFolder}}/permanent-notes/` or `05-knowledge/`
 
 **Filename:** Descriptive title (`Context-Switching-Reduces-Focus.md`)
 
@@ -114,7 +114,7 @@ For each permanent note created:
 
 When source has valuable context (article, meeting, book):
 
-**Location:** `{{brainFolder}}/03-Resources/`
+**Location:** `{{brainFolder}}/03-resources/reference-notes/`
 
 ```markdown
 ---
@@ -151,7 +151,7 @@ After successful extraction:
 |-------------|--------|
 | Fleeting notes | Delete |
 | Dumps | Delete |
-| Meeting notes | Archive to `Archives/` |
+| Meeting notes | Archive to `archives/` |
 | Rich sources | Convert to reference note |
 
 **Rationale:** GTD canon - processed items leave the system. Git preserves history.

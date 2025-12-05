@@ -96,7 +96,7 @@ INVENTORY → TRACE → DIAGNOSE → PRESCRIBE
 | `ORPHANED_NOTE` | Permanent note with 0 backlinks |
 | `OVERPLANNING` | Plan completion rate < 30% |
 
-**Output:** System observation report to `Archives/Intelligence/system-health/`.
+**Output:** System observation report to `archives/intelligence/system-health/`.
 
 ---
 

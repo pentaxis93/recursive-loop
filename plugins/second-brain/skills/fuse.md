@@ -18,9 +18,9 @@ Scan vault for unprocessed content:
 
 | Location | Content |
 |----------|---------|
-| `00-Inbox/dumps/` | Unprocessed dumps |
-| `01-Projects/*/dumps/` | Project dumps |
-| `Archives/Intelligence/recon/` | Recon reports |
+| `00-inbox/dumps/` | Unprocessed dumps |
+| `01-projects/*/dumps/` | Project dumps |
+| `archives/intelligence/intel/` | Intel reports |
 
 Ask: "Time period? (week, month, quarter, all, custom)"
 
@@ -49,7 +49,7 @@ From patterns → principles:
 
 #### Framework File
 
-**File:** `{{brainFolder}}/05-Knowledge/consolidated/{{name}}-framework.md`
+**File:** `{{brainFolder}}/05-knowledge/consolidated/{{name}}-framework.md`
 
 ```markdown
 ---
@@ -129,7 +129,7 @@ tags: ["#framework", "#consolidated", "#{{topic}}"]
 
 #### Pattern File
 
-**File:** `{{brainFolder}}/05-Knowledge/patterns/pattern-{{name}}.md`
+**File:** `{{brainFolder}}/05-knowledge/patterns/pattern-{{name}}.md`
 
 ```markdown
 ---
@@ -169,7 +169,7 @@ tags: ["#pattern", "#analysis"]
 
 #### Timeline Entry
 
-**File:** `{{brainFolder}}/05-Knowledge/timeline/{{topic}}-evolution-{{YYYY-MM}}.md`
+**File:** `{{brainFolder}}/05-knowledge/timeline/{{topic}}-evolution-{{YYYY-MM}}.md`
 
 ```markdown
 ---
@@ -218,9 +218,9 @@ rm "{{dump_path}}"
 
 | Task Type | Destination |
 |-----------|-------------|
-| Framework ready | `02-Areas/Zettelkasten.md` High Priority |
-| Needs analysis | `02-Areas/Zettelkasten.md` Someday/Maybe |
-| Pattern to monitor | `02-Areas/Zettelkasten.md` Waiting On |
+| Framework ready | `02-areas/Zettelkasten.md` High Priority |
+| Needs analysis | `02-areas/Zettelkasten.md` Someday/Maybe |
+| Pattern to monitor | `02-areas/Zettelkasten.md` Waiting On |
 | Framework application | Relevant project |
 
 ### 7. Integrate
@@ -243,7 +243,7 @@ Update `## 📚 Resources & References` in areas
 
 #### Update MOC
 
-**File:** `{{brainFolder}}/05-Knowledge/MOC-Consolidated-Knowledge.md`
+**File:** `{{brainFolder}}/05-knowledge/MOC-Consolidated-Knowledge.md`
 
 ```markdown
 ---

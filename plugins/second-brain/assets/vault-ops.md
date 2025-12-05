@@ -7,23 +7,23 @@
 ### Folder Structure
 
 ```text
-00-Inbox/           # Unprocessed captures
-01-Projects/        # Active projects (has deadline/end state)
-02-Areas/           # Ongoing responsibilities
-03-Resources/       # Reference materials
-05-Knowledge/       # Consolidated frameworks, patterns
-Archives/           # Completed/inactive
+00-inbox/           # Unprocessed captures
+01-projects/        # Active projects (has deadline/end state)
+02-areas/           # Ongoing responsibilities
+03-resources/       # Reference materials
+05-knowledge/       # Consolidated frameworks, patterns
+archives/           # Completed/inactive
 ```
 
 ### PARA Decision
 
 | Question | Destination |
 |----------|-------------|
-| Has deadline or end state? | `01-Projects/` |
-| Continuous responsibility? | `02-Areas/` |
-| Just reference material? | `03-Resources/` |
-| Done/inactive? | `Archives/` |
-| Not sure yet? | `00-Inbox/` |
+| Has deadline or end state? | `01-projects/` |
+| Continuous responsibility? | `02-areas/` |
+| Just reference material? | `03-resources/` |
+| Done/inactive? | `archives/` |
+| Not sure yet? | `00-inbox/` |
 
 ---
 
@@ -83,7 +83,7 @@ Archives/           # Completed/inactive
 ---
 title: "Note Title"
 created: "YYYY-MM-DD"
-type: "permanent-note|reference-note|project|area|dump|recon|framework"
+type: "permanent-note|reference-note|project|area|dump|intel|framework"
 status: "active|draft|completed|captured"
 domain: "personal|professional|project|shared"
 tags:
@@ -121,7 +121,7 @@ tags:
 #framework
 #pattern
 #dump
-#recon
+#intel
 ```
 
 ### Always Include
@@ -184,7 +184,7 @@ Never copy-paste. Read → Close source → Write in own words.
 |------|---------|
 | Permanent note | Descriptive title (`Context-Switching-Reduces-Focus.md`) |
 | Dump | `dump-YYYY-MM-DD-HHMM-slug.md` |
-| Recon | `recon-YYYY-MM-DD.md` |
+| Intel | `intel-YYYY-MM-DD.md` |
 | Framework | `name-framework.md` |
 | Pattern | `pattern-name.md` |
 
@@ -217,9 +217,9 @@ Hub notes that organize permanent notes by topic.
 
 When executing skills:
 
-- `dump` → Creates raw capture in `00-Inbox/dumps/`
-- `recon` → Creates intel report in `Archives/Intelligence/recon/`
+- `dump` → Creates raw capture in `00-inbox/dumps/`
+- `intel` → Creates intel report in `archives/intelligence/intel/`
 - `refine` → Processes raw → permanent notes with links
-- `fuse` → Consolidates permanents → frameworks in `05-Knowledge/`
+- `fuse` → Consolidates permanents → frameworks in `05-knowledge/`
 
 All skills must follow these canonical rules for frontmatter, linking, and file placement.

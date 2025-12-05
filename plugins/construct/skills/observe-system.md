@@ -47,7 +47,7 @@ Read `.claude/brain-config.json` to get `brainFolder` path.
 
 ```text
 If vault has:
-  - < 5 frameworks in 05-Knowledge/consolidated/ OR
+  - < 5 frameworks in 05-knowledge/consolidated/ OR
   - < 10 permanent notes OR
   - < 4 weeks of dumps/debriefs
 -> Exit with INSUFFICIENT_CORPUS
@@ -61,7 +61,7 @@ INSUFFICIENT_CORPUS
 The system needs time to produce artifacts before observation is meaningful.
 
 Minimum requirements:
-- 5+ frameworks in 05-Knowledge/consolidated/
+- 5+ frameworks in 05-knowledge/consolidated/
 - 10+ permanent notes
 - 4+ weeks of activity (dumps or debriefs)
 
@@ -90,13 +90,13 @@ What has the system created?
 
 | Artifact Type | Location | Identifying Marker |
 |---------------|----------|--------------------|
-| Frameworks | `05-Knowledge/consolidated/*.md` | `type: "framework"` in frontmatter |
-| Patterns | `05-Knowledge/patterns/*.md` | `type: "pattern"` in frontmatter |
-| Permanent Notes | `Permanent Notes/**/*.md` | Standalone notes with wikilinks |
+| Frameworks | `05-knowledge/consolidated/*.md` | `type: "framework"` in frontmatter |
+| Patterns | `05-knowledge/patterns/*.md` | `type: "pattern"` in frontmatter |
+| Permanent Notes | `permanent-notes/**/*.md` | Standalone notes with wikilinks |
 | Skills | `.claude/skills/*.md` | YAML frontmatter present |
-| Daily Plans | `Archives/Daily Plans/*.md` | `type: "plan"` or date filename |
-| Debriefs | `Archives/Intelligence/checkins/debrief-*.md` | `type: "debrief"` |
-| Recon Reports | `Archives/Intelligence/recon/*.md` | `type: "recon"` |
+| Daily Plans | `archives/daily-plans/*.md` | `type: "plan"` or date filename |
+| Debriefs | `archives/intelligence/checkins/debrief-*.md` | `type: "debrief"` |
+| Intel Reports | `archives/intelligence/intel/*.md` | `type: "intel"` |
 
 **For each artifact, extract:**
 
@@ -122,9 +122,9 @@ What has been used vs. what sits dormant?
 |---------------|--------------|------------------|
 | Frameworks | Referenced in new content | Grep `[[framework-name]]` in dumps, notes, debriefs |
 | Patterns | Manifested in debriefs | Pattern name appears in "Recurring Themes" sections |
-| Permanent Notes | Linked from newer notes | Count backlinks created *after* note creation |
+| Permanent notes | Linked from newer notes | Count backlinks created *after* note creation |
 | Skills | Invocations | Skill name mentioned in dumps/debriefs |
-| Daily Plans | Completion rate | Compare tasks listed vs tasks checked |
+| Daily plans | Completion rate | Compare tasks listed vs tasks checked |
 
 **Usage score calculation:**
 
@@ -204,7 +204,7 @@ Transform observation into action.
 
 | Category | Trigger | Recommended Action |
 |----------|---------|-------------------|
-| **PRUNE** | Dormant 8+ weeks, no genealogy value | Archive to `Archives/Deprecated/` or delete |
+| **PRUNE** | Dormant 8+ weeks, no genealogy value | Archive to `archives/Deprecated/` or delete |
 | **REVIVE** | Dormant 4-8 weeks, high initial value | Revisit and update; add fresh references |
 | **FUSE** | Multiple related patterns/frameworks | Consolidate into single framework |
 | **SPLIT** | Overloaded framework (10+ principles) | Decompose into focused units |
@@ -250,7 +250,7 @@ priority = (
 
 ## Output
 
-**File:** `{{brainFolder}}/Archives/Intelligence/system-health/observe-system-{{YYYY-MM-DD}}.md`
+**File:** `{{brainFolder}}/archives/intelligence/system-health/observe-system-{{YYYY-MM-DD}}.md`
 
 ````markdown
 ---
@@ -290,9 +290,9 @@ tags: ["#meta-cognition", "#system-health", "#observe-system"]
 |------|-------|-------------|-------|
 | Frameworks | {{n}} | {{n}} | {{↑↓→}} |
 | Patterns | {{n}} | {{n}} | {{↑↓→}} |
-| Permanent Notes | {{n}} | {{n}} | {{↑↓→}} |
+| Permanent notes | {{n}} | {{n}} | {{↑↓→}} |
 | Skills | {{n}} | {{n}} | {{↑↓→}} |
-| Daily Plans | {{n}} | {{n}} | {{↑↓→}} |
+| Daily plans | {{n}} | {{n}} | {{↑↓→}} |
 
 ### Newest Artifacts
 - [[artifact]] — {{date}} — {{type}}
@@ -319,7 +319,7 @@ tags: ["#meta-cognition", "#system-health", "#observe-system"]
 ```text
 Dumps Created:    {{n}}
 Dumps Processed:  {{n}} ({{%}}%)
-→ Permanent Notes: {{n}}
+→ Permanent notes: {{n}}
 → Frameworks:      {{n}}
 
 Flow Score: {{0.0-1.0}}

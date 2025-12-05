@@ -8,27 +8,17 @@ Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Execute
 
-1. **File:** `{{brainFolder}}/00-Inbox/captures/{{YYYY-MM-DD}}.md`
+1. **File:** `{{brainFolder}}/00-inbox/capture-{{YYYY-MM-DD}}-{{HHmmss}}.md`
 
-2. **If missing, create:**
+2. **Create:**
 
    ```markdown
    ---
-   title: "Daily Inbox - {{YYYY-MM-DD}}"
-   type: inbox
+   type: capture
+   created: "{{YYYY-MM-DD}} {{HH:mm}}"
    ---
-
-   # {{YYYY-MM-DD}}
-   ```
-
-3. **Append:**
-
-   ```markdown
-   ### {{HH:mm}}
 
    {{input}}
-
-   ---
    ```
 
-4. **Confirm:** `Captured at {{HH:mm}}`
+3. **Confirm:** `Captured at {{HH:mm}}`

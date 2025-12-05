@@ -71,22 +71,25 @@ Extract: name, role, projects, interests, preferences.
 ```text
 _system/
 {{brainFolder}}/
-├── 00-Inbox/
+├── 00-inbox/
 │   └── dumps/
-├── 01-Projects/
-├── 02-Areas/
-│   └── Relationships/
-├── 03-Resources/
-├── 05-Knowledge/
+├── 01-projects/
+├── 02-areas/
+│   └── relationships/
+├── 03-resources/
+│   └── reference-notes/
+├── 05-knowledge/
 │   ├── consolidated/
 │   ├── patterns/
 │   └── timeline/
-├── Archives/
-│   ├── Intelligence/
-│   │   ├── recon/
+├── archives/
+│   ├── intelligence/
+│   │   ├── intel/
+│   │   ├── audit/
 │   │   └── checkins/
-│   └── Completed/
-└── Permanent Notes/
+│   ├── daily-plans/
+│   └── completed/
+└── permanent-notes/
 ```
 
 ### 4. Create Profile
@@ -140,7 +143,7 @@ created: "{{YYYY-MM-DD}}"
 
 Ask: "Important people to track? (names or skip)"
 
-If names provided, create `{{brainFolder}}/02-Areas/Relationships/{{Name}}.md` for each.
+If names provided, create `{{brainFolder}}/02-areas/relationships/{{Name}}.md` for each.
 
 ### 7. Run Plugin Modules
 
@@ -181,7 +184,7 @@ created: "{{YYYY-MM-DD}}"
 ## Active Projects
 
 ```tasks
-path includes 01-Projects
+path includes 01-projects
 has due date
 not done
 ```
@@ -195,7 +198,7 @@ not done
 
 ## Inbox Count
 
-Check 00-Inbox/ for unprocessed items
+Check 00-inbox/ for unprocessed items
 
 ---
 
@@ -204,7 +207,7 @@ Updated by GTD skill
 
 ### 2. Create Standard Areas
 
-Create in `{{brainFolder}}/02-Areas/` (skip if exists):
+Create in `{{brainFolder}}/02-areas/` (skip if exists):
 
 **Career-Development.md:**
 
@@ -326,7 +329,7 @@ tags:
 Create folders if not exist:
 
 ```text
-{{brainFolder}}/00-Inbox/
+{{brainFolder}}/00-inbox/
 ├── Daily/
 └── Fleeting-Notes/
 ```
@@ -338,7 +341,7 @@ Ask: "What's one thing you're working on that has multiple steps?"
 If provided:
 
 - Follow-up: "What does done look like?" + "What's the next physical action?"
-- Create `{{brainFolder}}/01-Projects/{{Name}}.md`:
+- Create `{{brainFolder}}/01-projects/{{Name}}.md`:
 
 ```markdown
 ---

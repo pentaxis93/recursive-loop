@@ -39,9 +39,9 @@ Extract:
 
 ### 4. Output
 
-**File:** `{{brainFolder}}/00-Inbox/dumps/dump-{{YYYY-MM-DD}}-{{HHMM}}-{{slug}}.md`
+**File:** `{{brainFolder}}/00-inbox/dumps/dump-{{YYYY-MM-DD}}-{{HHMM}}-{{slug}}.md`
 
-(Project-specific: `{{brainFolder}}/01-Projects/{{project}}/dumps/`)
+(Project-specific: `{{brainFolder}}/01-projects/{{project}}/dumps/`)
 
 ```markdown
 ---
@@ -77,7 +77,7 @@ status: "captured"
 
 If `_system/watchlist.md` exists and input mentions tracked entities:
 
-Create/update: `{{brainFolder}}/01-Projects/{{project}}/competitive/{{company}}.md`
+Create/update: `{{brainFolder}}/01-projects/{{project}}/competitive/{{company}}.md`
 
 ### 6. Lifecycle
 

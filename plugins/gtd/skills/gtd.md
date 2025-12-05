@@ -31,7 +31,7 @@ If missing: "Run /setup first."
 ### Scan
 
 ```text
-{{brainFolder}}/00-Inbox/captures/
+{{brainFolder}}/00-inbox/
 ```
 
 ### Clarify (per item)
@@ -47,10 +47,10 @@ If missing: "Run /setup first."
 | Destination | Criteria |
 |-------------|----------|
 | Existing project | Related to active project |
-| `01-Projects/` | New multi-step outcome |
-| `02-Areas/` | Ongoing responsibility |
-| `02-Areas/Relationships/` | About specific person |
-| `03-Resources/` | Reference only |
+| `01-projects/` | New multi-step outcome |
+| `02-areas/` | Ongoing responsibility |
+| `02-areas/relationships/` | About specific person |
+| `03-resources/reference-notes/` | Reference only |
 | Delete | No value |
 
 ### Priority Tags
@@ -67,11 +67,11 @@ Delete processed capture blocks. Delete empty files.
 
 ### Project Review
 
-Scan `01-Projects/` for `status: active`:
+Scan `01-projects/` for `status: active`:
 
 - Has next action? If no → flag
 - Stalled >7d? → flag
-- Done? → Archive to `Archives/Completed/`
+- Done? → Archive to `archives/completed/`
 
 ---
 
@@ -87,9 +87,9 @@ Inbox items ≥5? → Offer to process first.
 
 Scan for tasks (not #someday, not #waiting):
 
-- `01-Projects/` (status: active)
-- `02-Areas/`
-- `02-Areas/Relationships/`
+- `01-projects/` (status: active)
+- `02-areas/`
+- `02-areas/relationships/`
 
 ### Prioritize
 
@@ -102,7 +102,7 @@ Scan for tasks (not #someday, not #waiting):
 
 ### Output
 
-Create `{{brainFolder}}/Archives/Daily Plans/{{YYYY-MM-DD}}.md`:
+Create `{{brainFolder}}/archives/daily-plans/{{YYYY-MM-DD}}.md`:
 
 - Focus statement (top 3 priorities)
 - Tasks plugin queries by context (@Computer, @Phone, @Home, @Errands, @Anywhere)
@@ -132,7 +132,7 @@ Inbox items ≥5? → Offer to process first.
 
 Ask: "Focus for tomorrow?"
 
-Create draft: `{{brainFolder}}/Archives/Daily Plans/{{tomorrow}}.md`
+Create draft: `{{brainFolder}}/archives/daily-plans/{{tomorrow}}.md`
 
 - User's stated focus
 - Same query structure as PLAN
