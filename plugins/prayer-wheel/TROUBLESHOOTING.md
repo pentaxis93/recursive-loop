@@ -25,5 +25,5 @@ The PostToolUse mantra is silent by design. To verify it's working:
 ## Compatibility
 
 - Requires Claude Code with hooks support
-- Works alongside other plugins (cosmic-janitor, etc.)
+- Works alongside other plugins (talos, etc.)
 - No conflicts expected with standard configurations

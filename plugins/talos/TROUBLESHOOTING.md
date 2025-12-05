@@ -1,6 +1,6 @@
-# Cosmic Janitor: Troubleshooting Guide
+# Talos: Troubleshooting Guide
 
-This guide helps diagnose and resolve common issues with the `cosmic-janitor` plugin.
+This guide helps diagnose and resolve common issues with the `talos` plugin.
 
 ---
 
@@ -16,10 +16,10 @@ Run inside Claude Code:
 /plugin list
 ```
 
-**Expected output**: `cosmic-janitor` appears in the list as enabled.
+**Expected output**: `talos` appears in the list as enabled.
 
 **If missing**: See [Installation Issues](#installation-issues)
-**If disabled**: Run `/plugin enable cosmic-janitor` inside Claude Code.
+**If disabled**: Run `/plugin enable talos` inside Claude Code.
 
 ### 2. Is the hook firing?
 
@@ -69,7 +69,7 @@ Start Here
 **Symptoms:**
 
 - Ran `/plugin install ...` successfully.
-- `/plugin list` is empty or missing `cosmic-janitor`.
+- `/plugin list` is empty or missing `talos`.
 
 **Solution:**
 
@@ -85,8 +85,8 @@ Start Here
 3. **Reinstall:**
 
    ```text
-   /plugin uninstall cosmic-janitor
-   /plugin install cosmic-janitor@pentaxis93
+   /plugin uninstall talos
+   /plugin install talos@pentaxis93
    ```
 
 ---
@@ -133,10 +133,10 @@ The injection payload contains unescaped characters that broke the JSON structur
 1. **Update the plugin:** We may have patched a JSON escape sequence issue.
 
    ```text
-   /plugin update cosmic-janitor
+   /plugin update talos
    ```
 
-2. **Report Bug:** If on the latest version, this is a bug in the `cosmic-janitor` parser. Open an issue on the marketplace repo.
+2. **Report Bug:** If on the latest version, this is a bug in the `talos` parser. Open an issue on the marketplace repo.
 
 ---
 
@@ -209,4 +209,4 @@ File issues on the `pentaxis93/claude-code-plugins` GitHub repository.
 
 - Plugin Version
 - Claude Code Version
-- A screenshot of the "polite" output (proof the Janitor is sleeping).
+- A screenshot of the "polite" output (proof Talos is sleeping).

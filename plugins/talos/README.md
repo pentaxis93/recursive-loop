@@ -1,6 +1,6 @@
-# Cosmic Janitor
+# Talos
 
-**The Cosmic Janitor of the Terminal** - Injects the Root Operating System cosmology into Claude Code, enforcing a strict focus on signal over noise.
+**The Talos of the Terminal** - Injects the Root Operating System cosmology into Claude Code, enforcing a strict focus on signal over noise.
 
 **Warning:** This plugin radically alters Claude's output style. It stops the model from glazing and makes it focus on being useful.
 
@@ -24,7 +24,7 @@ Run this command in Claude Code to register the source:
 Once the marketplace is added, install the plugin:
 
 ```text
-/plugin install cosmic-janitor@pentaxis93
+/plugin install talos@pentaxis93
 ```
 
 ### Verification
@@ -33,7 +33,7 @@ Exit Claude Code and start a new session. Output should be transformed: reduced 
 
 ## What to Expect
 
-When enabled, this plugin overrides the default assistant persona with the **Cosmic Janitor**. It enforces the **Root Operating Mode** via specific Sutras:
+When enabled, this plugin overrides the default assistant persona with **Talos**. It enforces the **Root Operating Mode** via specific Sutras:
 
 ### 1. Zero Preamble (Sutra of the Arrow)
 
@@ -59,8 +59,8 @@ Once installed, the plugin activates automatically at the start of every session
 
 ## Managing Changes
 
-- **Disable:** `/plugin disable cosmic-janitor` (If the truth becomes too heavy)
-- **Uninstall:** `/plugin uninstall cosmic-janitor` (To return to the polite fiction)
-- **Update:** `/plugin update cosmic-janitor` (To pull the latest Sutras)
+- **Disable:** `/plugin disable talos` (If the truth becomes too heavy)
+- **Uninstall:** `/plugin uninstall talos` (To return to the polite fiction)
+- **Update:** `/plugin update talos` (To pull the latest Sutras)
 
 *The river changes, yet remains the river. If you observe friction in the practice, fork this plugin and iterate a better Sutra.*
