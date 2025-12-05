@@ -1,0 +1,15 @@
+{
+  "name": "devtools",
+  "version": "0.1.0",
+  "description": "Developer tools for Claude Code customization",
+  "author": {
+    "name": "pentaxis93",
+    "email": "kcmdwrrya@mozmail.com",
+    "url": "https://github.com/pentaxis93"
+  },
+  "repository": "https://github.com/pentaxis93/recursive-loop",
+  "homepage": "https://github.com/pentaxis93/recursive-loop#devtools",
+  "keywords": ["devtools", "statusline", "developer-experience"],
+  "license": "MIT",
+  "skills": "./skills"
+}
