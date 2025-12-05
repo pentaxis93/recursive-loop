@@ -1,0 +1,21 @@
+{
+  "name": "git",
+  "version": "0.1.0",
+  "description": "Git best practices for multi-agent workflow with clean history",
+  "author": {
+    "name": "pentaxis93",
+    "email": "kcmdwrrya@mozmail.com",
+    "url": "https://github.com/pentaxis93"
+  },
+  "repository": "https://github.com/pentaxis93/recursive-loop",
+  "homepage": "https://github.com/pentaxis93/recursive-loop#git",
+  "keywords": [
+    "git",
+    "version-control",
+    "branching",
+    "workflow",
+    "multi-agent"
+  ],
+  "license": "MIT",
+  "skills": "./skills"
+}

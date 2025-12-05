@@ -44,6 +44,12 @@
       "source": "./plugins/devtools",
       "version": "0.1.0",
       "description": "Developer tools for Claude Code customization"
+    },
+    {
+      "name": "git",
+      "source": "./plugins/git",
+      "version": "0.1.0",
+      "description": "Git best practices for multi-agent workflow with clean history"
     }
   ],
   "keywords": [
