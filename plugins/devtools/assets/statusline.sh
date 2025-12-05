@@ -3,7 +3,7 @@
 # Reads JSON from stdin, outputs formatted status
 
 read -r input
-model=$(echo "$input" | jq -r '.model.name // "unknown"')
+model=$(echo "$input" | jq -r '.model.display_name // "unknown"')
 cwd=$(echo "$input" | jq -r '.cwd // "."')
 
 # ANSI colors
