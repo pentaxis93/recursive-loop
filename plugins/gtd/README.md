@@ -41,11 +41,23 @@ Already ran `/setup` before installing gtd? Run it again — it's idempotent and
 
 ## Commands
 
-### /capture
+### /gtd:capture
 
 Append input to daily inbox file with timestamp.
 
-**Invoke:** `/capture [your thought]`
+**Invoke:** `/gtd:capture [your thought]`
+
+### /gtd:process-gtd
+
+Clarify and route inbox items (GTD PROCESS).
+
+### /gtd:plan-gtd
+
+Generate prioritized daily plan (GTD PLAN).
+
+### /gtd:close-gtd
+
+Review day and prep tomorrow (GTD CLOSE).
 
 ## References
 

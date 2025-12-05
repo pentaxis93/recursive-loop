@@ -23,11 +23,11 @@ debrief → [weekly patterns] ↗
 
 ## Commands
 
-### /setup
+### /second-brain:setup
 
 Configure Second Brain vault with plugin-aware modules.
 
-**Run:** `/setup`
+**Run:** `/second-brain:setup`
 
 1. Detect Obsidian vault (folder with `.obsidian/`)
 2. Gather user context (name, role, projects, interests)
@@ -40,6 +40,26 @@ Configure Second Brain vault with plugin-aware modules.
 **Idempotent:** Install a new plugin later? Run `/setup` again — it detects what's missing and adds it.
 
 **Run again to update:** profile, interests, relationships, add modules, or switch vault.
+
+### /second-brain:dump
+
+Capture stream-of-consciousness with domain classification.
+
+### /second-brain:recon
+
+Intelligence gathering with 7-day freshness verification.
+
+### /second-brain:fuse
+
+Consolidate scattered insights into frameworks.
+
+### /second-brain:refine
+
+Process raw captures into atomic permanent notes with links.
+
+### /second-brain:debrief
+
+Weekly cross-domain pattern recognition and reflection.
 
 ## Skills
 

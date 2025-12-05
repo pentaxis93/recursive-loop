@@ -126,6 +126,12 @@ This mirrors Gurdjieff's **self-remembering**: constant divided attention (pulse
 
 ---
 
+## Commands
+
+### /construct:prism
+
+Multi-perspective capture analysis (10 lenses).
+
 ## Managing Changes
 
 - **Disable:** `/plugin disable construct`
