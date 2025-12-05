@@ -1,17 +1,17 @@
-# Claude Code Plugins
+# Recursive Loop
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Claude Code](https://img.shields.io/badge/claude--code-%3E%3D1.0.0-purple)
 
-A Claude Code plugin marketplace.
+A plugin marketplace for Claude Code.
 
 ## Quick Start
 
 ### 1. Add the Marketplace
 
 ```text
-/plugin marketplace add pentaxis93/claude-code-plugins
+/plugin marketplace add pentaxis93/recursive-loop
 ```
 
 ### 2. Install a Plugin

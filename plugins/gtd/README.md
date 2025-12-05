@@ -5,7 +5,7 @@ Getting Things Done execution engine for Obsidian-based second brain systems.
 ## Installation
 
 ```text
-/plugin marketplace add pentaxis93/claude-code-plugins
+/plugin marketplace add pentaxis93/recursive-loop
 /plugin install gtd@pentaxis93
 ```
 

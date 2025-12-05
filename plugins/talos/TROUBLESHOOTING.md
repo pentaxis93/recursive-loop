@@ -203,7 +203,7 @@ This is the **Protocol of Zero-Waste**. We prioritize the artifact (the code) ov
 3. Run `/plugin list` to confirm the plugin is enabled and current.
 
 **Where to Report:**
-File issues on the `pentaxis93/claude-code-plugins` GitHub repository.
+File issues on the `pentaxis93/recursive-loop` GitHub repository.
 
 **Include:**
 

@@ -16,7 +16,7 @@
 Run this command in Claude Code to register the source:
 
 ```text
-/plugin marketplace add pentaxis93/claude-code-plugins
+/plugin marketplace add pentaxis93/recursive-loop
 ```
 
 ### 2. Install the Plugin

@@ -1,9 +1,9 @@
 {
-  "name": "claude-code-plugins",
+  "name": "recursive-loop",
   "version": "0.1.0",
   "category": "productivity",
   "description": "Talos plugin marketplace - injects Root Operating System cosmology into Claude Code",
-  "homepage": "https://github.com/pentaxis93/claude-code-plugins",
+  "homepage": "https://github.com/pentaxis93/recursive-loop",
   "owner": {
     "name": "pentaxis93",
     "email": "kcmdwrrya@mozmail.com"
