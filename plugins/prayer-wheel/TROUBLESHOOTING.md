@@ -9,6 +9,7 @@
 ## JSON parse errors
 
 If you see JSON parse errors:
+
 1. Ensure scripts output valid JSON
 2. The fallback (no jq) uses hardcoded strings - these should always work
 3. Check for any shell output before the JSON (redirect stderr if needed)
@@ -16,6 +17,7 @@ If you see JSON parse errors:
 ## Verifying the wheel is turning
 
 The PostToolUse mantra is silent by design. To verify it's working:
+
 1. Enable verbose mode in Claude Code
 2. Hook output should appear in logs
 3. Or temporarily add visible output to the scripts

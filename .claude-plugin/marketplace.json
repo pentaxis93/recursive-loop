@@ -32,6 +32,12 @@
       "source": "./plugins/gtd",
       "version": "0.1.0",
       "description": "Getting Things Done execution engine for Obsidian-based systems"
+    },
+    {
+      "name": "prayer-wheel",
+      "source": "./plugins/prayer-wheel",
+      "version": "0.1.0",
+      "description": "A digital prayer wheel that injects Buddhist dedications and mantras into Claude Code sessions"
     }
   ],
   "keywords": [
