@@ -1,8 +1,11 @@
 ---
-description: Reconnaissance - verified intel from noise (7-day freshness)
+description: External news intelligence with 7-day freshness verification
 ---
 
-# Recon
+# Intel
+
+**CRITICAL:** This skill performs WEB-BASED intelligence gathering using WebSearch.
+Do NOT scan vault files. Use WebSearch for external news only.
 
 Config: `.claude/brain-config.json` → `brainFolder`
 
@@ -18,9 +21,15 @@ Read:
 
 ## Execute
 
-### 1. Research
+### 1. Research (WebSearch Required)
 
-Search based on user's interest profile. Focus on strategic relevance.
+**Use WebSearch tool** to find news based on user's interest profile. Focus on strategic relevance.
+
+For each interest topic and watchlist item:
+
+1. Construct search query with "December 2025" or current month/year
+2. Execute WebSearch
+3. Extract relevant results
 
 **Verification Standards (MANDATORY):**
 
@@ -67,24 +76,24 @@ Search based on user's interest profile. Focus on strategic relevance.
 
 ### 4. Output
 
-**File:** `{{brainFolder}}/Archives/Intelligence/recon/recon-{{YYYY-MM-DD}}.md`
+**File:** `{{brainFolder}}/Archives/Intelligence/intel/intel-{{YYYY-MM-DD}}.md`
 
 ```markdown
 ---
-type: "recon"
+type: "intel"
 domain: "shared"
 date: "{{YYYY-MM-DD}}"
 created: "{{YYYY-MM-DD HH:MM}}"
 sources_verified: true
 news_age_verified: true
 confidence: "high"
-tags: ["#recon", "#intel", "#strategic-intelligence"]
+tags: ["#intel", "#strategic-intelligence"]
 interests: ["{{interest1}}", "{{interest2}}"]
 projects_referenced: ["{{project1}}"]
 items_count: {{number}}
 ---
 
-# Recon - {{Date}}
+# Intel - {{Date}}
 
 ## Situation
 {{2-3 sentences on most important developments}}
