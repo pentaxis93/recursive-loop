@@ -5,7 +5,7 @@ Knowledge capture and intelligence extraction for Obsidian-based systems.
 ## Installation
 
 ```text
-/plugin marketplace add pentaxis93/claude-code-plugins
+/plugin marketplace add pentaxis93/recursive-loop
 /plugin install second-brain@pentaxis93
 ```
 

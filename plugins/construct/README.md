@@ -5,7 +5,7 @@ The loading space. Downloadable cognitive programs for Claude Code.
 ## Installation
 
 ```text
-/plugin marketplace add pentaxis93/claude-code-plugins
+/plugin marketplace add pentaxis93/recursive-loop
 /plugin install construct@pentaxis93
 ```
 
