@@ -1,10 +1,10 @@
 ---
-description: GTD execution engine - process inbox, plan day, close day
+description: GTD execution engine - process inbox, orient to now
 ---
 
 # GTD
 
-Three operations: **PROCESS** → **PLAN** → **CLOSE**
+Two operations: **PROCESS** and **PLAN**
 
 ---
 
@@ -13,7 +13,7 @@ Three operations: **PROCESS** → **PLAN** → **CLOSE**
 1. Every project has exactly one next action
 2. Inbox empties completely (delete processed items)
 3. Tasks live in source files only (queries aggregate)
-4. Plan is a prioritized menu, not a commitment
+4. Plan is orientation to now, not commitment to ritual
 
 ---
 
@@ -28,13 +28,35 @@ If missing: "Run /setup first."
 
 **Trigger:** "process inbox", "clarify captures", "inbox zero"
 
+### Critical Rule
+
+**NEVER batch process autonomously.** Each capture requires user involvement. Processing is a micro-ritual of intentional decision-making, not automation.
+
 ### Scan
 
 ```text
-{{brainFolder}}/00-inbox/
+{{brainFolder}}/00-inbox/capture-*.md
 ```
 
-### Clarify (per item)
+One file = one capture. Process each file individually WITH USER.
+
+---
+
+### Micro-Ritual Flow (Per Item)
+
+For EACH capture, execute this four-step ritual:
+
+#### 1. PRESENT
+
+Read and display the capture content. Show proposed routing:
+
+```
+[Capture content here]
+
+→ Proposed: [Destination] as [task/project/reference]
+```
+
+Apply GTD decision tree internally to form proposal:
 
 | Question | If YES | If NO |
 |----------|--------|-------|
@@ -42,15 +64,40 @@ If missing: "Run /setup first."
 | Multi-step? | → Create Project | → Single Task |
 | <2 min? | → Do it now | → Route |
 
-### Route
+#### 2. CONFIRM
+
+Use AskUserQuestion to confirm routing:
+
+- **Options:** Confirm / Different destination / Skip / Trash
+- Wait for user response
+- **Never proceed without confirmation**
+
+#### 3. EXECUTE
+
+Only after user confirms:
+
+- Create task/project in confirmed destination
+- Apply priority tag if warranted
+- Delete capture file
+- Brief confirmation: "Routed to [destination]. Next?"
+
+#### 4. NEXT
+
+- Proceed to next item
+- Honor pause requests: "pause", "stop", "enough for now"
+- User controls pace
+
+---
+
+### Route Destinations
 
 | Destination | Criteria |
 |-------------|----------|
 | Existing project | Related to active project |
 | `01-projects/` | New multi-step outcome |
 | `02-areas/` | Ongoing responsibility |
-| `02-areas/relationships/` | About specific person |
-| `03-resources/reference-notes/` | Reference only |
+| `02-areas/people/` | About specific person |
+| `03-resources/` | Reference only |
 | Delete | No value |
 
 ### Priority Tags
@@ -61,13 +108,21 @@ If missing: "Run /setup first."
 | "someday" / "eventually" | `#someday` tag |
 | Default | No tag |
 
-### Cleanup
+### Batch Mode (Exception)
 
-Delete processed capture blocks. Delete empty files.
+Only if user explicitly requests "batch process" or "process all automatically":
+
+1. Show all items with proposed routing
+2. Ask for confirmation of entire batch
+3. Execute only after explicit approval
+
+Default is ALWAYS interactive micro-ritual.
+
+---
 
 ### Project Review
 
-Scan `01-projects/` for `status: active`:
+After inbox is empty, scan `01-projects/` for `status: active`:
 
 - Has next action? If no → flag
 - Stalled >7d? → flag
@@ -77,11 +132,34 @@ Scan `01-projects/` for `status: active`:
 
 ## PLAN
 
-**Trigger:** "plan my day", "what should I work on", "daily plan"
+**Trigger:** "plan my day", "what should I work on", "daily plan", "plan", "orient"
+
+### Temporal Awareness (Required)
+
+**First action:** Query system time via bash `date` command.
+
+```bash
+date "+%Y-%m-%d %H:%M %A"
+```
+
+Parse into: `$DATE`, `$HOUR`, `$DAY_OF_WEEK`
+
+Check for last plan: `{{brainFolder}}/archives/daily-plans/` - find most recent file.
+
+### Temporal Context
+
+| Hour Range | Context | Orientation |
+|------------|---------|-------------|
+| 05:00-11:59 | Morning | Full day ahead - "Today's priorities" |
+| 12:00-16:59 | Afternoon | Partial day - "Remaining runway" |
+| 17:00-20:59 | Evening | Day winding down - "Close + tomorrow seed" |
+| 21:00-04:59 | Night | Tomorrow focus - "Setting up tomorrow" |
+
+**Skipped days:** No judgment. If last plan was days ago, that's data, not failure. Orient to now.
 
 ### Pre-check
 
-Inbox items ≥5? → Offer to process first.
+Count `capture-*.md` files in `00-inbox/`. If ≥5 → Offer to process first.
 
 ### Gather
 
@@ -89,7 +167,7 @@ Scan for tasks (not #someday, not #waiting):
 
 - `01-projects/` (status: active)
 - `02-areas/`
-- `02-areas/relationships/`
+- `02-areas/people/`
 
 ### Prioritize
 
@@ -100,50 +178,138 @@ Scan for tasks (not #someday, not #waiting):
 | High priority (⏫) | +3 |
 | Blocks other work | +2 |
 
-### Output
+### Output (Time-Adaptive)
 
-Create `{{brainFolder}}/archives/daily-plans/{{YYYY-MM-DD}}.md`:
+**Target file:** `{{brainFolder}}/archives/daily-plans/{{$DATE}}.md`
 
-- Focus statement (top 3 priorities)
-- Tasks plugin queries by context (@Computer, @Phone, @Home, @Errands, @Anywhere)
-- Quick wins query (#time/5m, #time/15m)
-- Waiting-on query (#waiting)
+If file exists for today: **update** don't recreate. Plan is living document.
 
-Update `{{brainFolder}}/02-areas/GTD-Dashboard.md` with today's focus.
+#### Morning (05:00-11:59)
+
+Standard daily plan:
+
+```markdown
+---
+date: {{$DATE}}
+created: {{$HOUR}}:{{$MIN}}
+type: daily-plan
+status: active
+---
+
+# {{$DAY_OF_WEEK}}, {{$DATE}}
+
+## Focus
+
+[Top 3 priorities based on scoring]
+
+## By Context
+
+### @Computer
+\`\`\`tasks
+not done
+(path includes 01-projects) OR (path includes 02-areas)
+tags include #context/computer
+sort by priority
+\`\`\`
+
+### @Phone
+\`\`\`tasks
+not done
+tags include #context/phone
+\`\`\`
+
+### @Errands
+\`\`\`tasks
+not done
+tags include #context/errands
+\`\`\`
+
+## Quick Wins
+\`\`\`tasks
+not done
+(tags include #time/5m) OR (tags include #time/15m)
+\`\`\`
+
+## Waiting
+\`\`\`tasks
+not done
+tags include #waiting
+\`\`\`
+```
+
+#### Afternoon (12:00-16:59)
+
+Regroup orientation:
+
+```markdown
+## Afternoon Regroup ({{$HOUR}}:{{$MIN}})
+
+**Remaining runway:** ~{{hours until 17:00}} hours
+
+### Still Priority
+[Re-scored tasks accounting for time spent]
+
+### Realistic for Today
+[Subset that fits remaining time]
+
+### Defer to Tomorrow
+[Tasks that won't fit - no guilt, just triage]
+```
+
+#### Evening (17:00-20:59)
+
+Blend of close and tomorrow:
+
+```markdown
+## Evening Review ({{$HOUR}}:{{$MIN}})
+
+### Today's Trajectory
+[Brief: what moved, what didn't - no elaborate retrospective]
+
+### Tomorrow's Seed
+[Top 1-2 priorities for tomorrow, planted now]
+
+### Open Loops
+[Anything nagging that needs capture]
+```
+
+#### Night (21:00-04:59)
+
+Tomorrow-focused:
+
+```markdown
+## Tomorrow: {{$TOMORROW_DATE}}
+
+### Morning Focus
+[What to attack first when fresh]
+
+### The Day's Shape
+[Key commitments, meetings, deadlines]
+
+### Available Capacity
+[Realistic estimate after fixed commitments]
+```
 
 ---
 
-## CLOSE
+## Idempotence
 
-**Trigger:** "review my day", "daily closeout", "end of day"
+Running PLAN multiple times in one day:
+- Updates existing plan file (not creates new)
+- Temporal context shifts output appropriately
+- Each run is a fresh orientation to now
+- No state corruption, no duplicate files
 
-### Pre-check
-
-Inbox items ≥5? → Offer to process first.
-
-### Review
-
-1. Read today's plan
-2. Ask: what got done?
-3. Mark completions (tasks already sync via plugin)
-4. Capture unplanned work
-
-### Tomorrow Prep
-
-Ask: "Focus for tomorrow?"
-
-Create draft: `{{brainFolder}}/archives/daily-plans/{{tomorrow}}.md`
-
-- User's stated focus
-- Same query structure as PLAN
-- Status: draft
-
-Update `{{brainFolder}}/02-areas/GTD-Dashboard.md`.
+Running PLAN after skipped days:
+- Acknowledges gap matter-of-factly if relevant
+- Doesn't moralize about missed days
+- Just orients to present moment
 
 ---
 
 ## Invocation
 
 - `gtd process` or "process my inbox"
-- `gtd plan` or "plan my day"
-- `gtd close` or "review my day"
+- `gtd plan` or "plan my day" or "orient" or "what now"
+
+Note: CLOSE is subsumed by evening/night PLAN invocations. No separate operation needed.
