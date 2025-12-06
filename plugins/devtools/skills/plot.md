@@ -6,7 +6,7 @@ description: Weave stories into plot arcs (PRs) across managed repositories
 
 Analyze uncommitted changes across all managed repositories, identify narrative threads, and submit coherent PRs.
 
-*"Stories tell what happened. Plot tells why it matters."*
+> Stories tell what happened. Plot tells why it matters.
 
 ---
 
@@ -40,7 +40,7 @@ If section missing: prompt user to define scope.
 
 **Goal:** Understand all uncommitted changes, identify plot threads.
 
-### For each managed repository:
+### For each managed repository
 
 ```bash
 git -C {{path}} status
@@ -48,15 +48,16 @@ git -C {{path}} diff
 git -C {{path}} diff --cached
 ```
 
-### Analyze:
+### Analyze
 
 1. **What changed** - files, additions, deletions, modifications
 2. **Why it changed** - infer intent from context, recent conversation
 3. **What belongs together** - changes serving same narrative purpose
 
-### Identify Plot Threads:
+### Identify Plot Threads
 
 Group changes into logical PRs. A plot thread:
+
 - Has a single coherent purpose
 - May span multiple repos (cross-repo feature)
 - Contains all related changes (no orphans)
@@ -109,6 +110,7 @@ For cross-repo threads: create branch in all affected repos.
 ### 2.2 Commit
 
 Invoke `story` principles:
+
 - Atomic commits
 - Complete (code + docs)
 - Semantic messages
@@ -154,6 +156,7 @@ gh pr checks {{pr-number}} --watch
 **If CI passes:** Report success, continue to next thread.
 
 **If CI fails:**
+
 1. Analyze failure output
 2. Attempt fix (max 3 attempts)
 3. Commit fix with message: `fix(ci): {{description}}`
@@ -163,6 +166,7 @@ gh pr checks {{pr-number}} --watch
 ### 2.6 Report
 
 For each thread:
+
 - PR URL
 - CI status
 - Any issues encountered
@@ -228,4 +232,4 @@ If interrupted mid-execution:
 
 ---
 
-*Stories are told. Plots are woven. Each PR is a narrative arc that advances the codebase's story.*
+> Stories are told. Plots are woven. Each PR is a narrative arc that advances the codebase's story.

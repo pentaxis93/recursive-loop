@@ -33,6 +33,7 @@ git -C {{path}} status --porcelain
 ```
 
 Report:
+
 - Uncommitted changes (count)
 - Staged changes (count)
 - Untracked files (count)
@@ -44,6 +45,7 @@ git -C {{path}} branch -vv
 ```
 
 Report:
+
 - Current branch
 - Ahead/behind remote
 - Feature branches present
@@ -51,17 +53,20 @@ Report:
 ### 3. Open PRs
 
 Extract repo from remote URL:
+
 ```bash
 git -C {{path}} remote get-url origin
 # Parse: git@github.com:owner/repo.git → owner/repo
 ```
 
 Query GitHub:
+
 ```bash
 gh pr list --repo {{owner/repo}} --state open --json number,title,headRefName,createdAt
 ```
 
 Report:
+
 - Count of open PRs
 - List with: number, title, branch, age
 
@@ -72,6 +77,7 @@ gh pr checks {{number}} --repo {{owner/repo}}
 ```
 
 Report:
+
 - Passing / Failing / Pending
 
 ---

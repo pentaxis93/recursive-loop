@@ -6,7 +6,7 @@ description: Craft atomic, meaningful commits from uncommitted changes
 
 Analyze uncommitted changes and create atomic, meaningful commits.
 
-*"Each commit should tell a single story, complete and self-contained."*
+> Each commit should tell a single story, complete and self-contained.
 
 ---
 
@@ -31,11 +31,13 @@ Analyze uncommitted changes and create atomic, meaningful commits.
 ### The Complete Feature Rule
 
 A commit is complete only when it includes ALL of:
+
 - Implementation (code, configs, scripts)
 - Documentation (CLAUDE.md, README, inline docs)
 - Tests (if applicable)
 
 **NEVER separate:**
+
 - ❌ "Add feature" → "Document feature"
 - ❌ "Implement X" → "Update docs for X"
 
@@ -46,12 +48,14 @@ Documentation synchronization is not optional.
 One user-facing capability or one conceptual change:
 
 ✅ **Good boundaries:**
+
 - One feature with all its parts
 - One bug fix (cause + fix + docs)
 - One refactoring (change + updated docs)
 - One configuration enhancement
 
 ❌ **Bad boundaries:**
+
 - Mixing unrelated features
 - Implementation without documentation
 - Multiple unrelated changes
@@ -67,7 +71,7 @@ One user-facing capability or one conceptual change:
 
 ## Message Format
 
-```
+```text
 <type>(<scope>): <summary>
 
 <body - the why, not the what>

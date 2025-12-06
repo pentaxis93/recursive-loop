@@ -5,6 +5,7 @@ description: Park an open decision/issue with full context for later
 Park an in-progress design decision, open question, or blocked issue.
 
 Creates structured capture with:
+
 - Context (what led here)
 - Changes made (if any)
 - Arguments for/against
