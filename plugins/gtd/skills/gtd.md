@@ -28,6 +28,8 @@ If missing: "Run /setup first."
 
 **Trigger:** "process inbox", "clarify captures", "inbox zero"
 
+**Assumption:** User is present and engaged when this operation is invoked. No presence confirmation needed. User owns the responsibility to be present—trust this.
+
 ### Phase 1: SCAN (once)
 
 ```text
