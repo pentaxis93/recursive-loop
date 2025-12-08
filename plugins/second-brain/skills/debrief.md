@@ -31,13 +31,18 @@ Scan recent files from past week:
 
 Lead through reflection questions. Conversational, not clinical.
 
+**Principle:** [[Friction-Minimization]] - Bundle related questions to reduce round-trips.
+
 #### Overall Assessment
 
-**Ask:**
+**Ask via single `AskUserQuestion`** (multiSelect where appropriate):
 
-- "Rate this week 1-5. Why that rating?"
-- "Biggest wins?"
-- "Main challenges?"
+```
+Questions:
+1. "Rate this week 1-5" - options: 1, 2, 3, 4, 5
+2. "Biggest win?" - free text (Other)
+3. "Main challenge?" - free text (Other)
+```
 
 **Listen for:** Sentiment, accomplishments, obstacles, emotional tone.
 

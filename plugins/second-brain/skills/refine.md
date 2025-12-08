@@ -12,7 +12,7 @@ Check `{{brainFolder}}/02-areas/Profile.md` exists. If not: prompt for /setup.
 
 ## Execute
 
-### 1. Gather Sources
+### 1. Gather & Present Sources
 
 Scan for unprocessed content:
 
@@ -24,7 +24,16 @@ Scan for unprocessed content:
 
 Identify items with `status: "captured"` or `#status/fleeting`.
 
-Ask: "Process all, or specific file?"
+**User must touch before deciding.** For each source found:
+- Short (<300 chars): Show full content
+- Long: Show title + first 2-3 lines + line count
+
+Present all sources with excerpts, then use `AskUserQuestion`:
+- "Process all"
+- "Select specific files" (if selected, follow up with which ones)
+- "Skip for now"
+
+**Principle:** [[User-Touch-Requirement]] - User cannot decide what to process without seeing what exists.
 
 ### 2. Read & Extract
 

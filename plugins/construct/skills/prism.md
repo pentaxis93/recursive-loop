@@ -28,8 +28,19 @@ RECON → EXTRACT → INTEGRATE
 
 ### Phase 1: RECON — Survey the Terrain
 
-Read entire capture without processing. Observe:
+**User must touch the capture first.**
 
+1. **Present the content:**
+   - Short (<500 chars): Show full text
+   - Long: Show first ~300 chars + "... (X more lines)"
+
+2. **Then ask** via `AskUserQuestion`:
+   - "Which lenses?" with recommended options based on content type
+   - Include "Let me see more" option for long captures
+
+**Principle:** [[User-Touch-Requirement]] - User cannot select lenses for material they haven't seen.
+
+After user sees content, observe:
 - What content types are present?
 - What domains does it span?
 - What's the complexity level?
