@@ -13,12 +13,14 @@ Execute the GTD PROCESS workflow. A micro-ritual, not automation.
 Before processing any item, read all inbox contents and **physically sort into staging folders**.
 
 **Source Locations:**
+
 - `{{brainFolder}}/00-inbox/*.md`
 - `{{brainFolder}}/00-inbox/voice-transcripts/*.md`
 - `{{brainFolder}}/00-inbox/dumps/*.md`
 
 **Staging Structure:**
-```
+
+```text
 00-inbox/
 ├── _staged/
 │   ├── quick-wins/      # Simple, obvious routing
@@ -28,6 +30,7 @@ Before processing any item, read all inbox contents and **physically sort into s
 ```
 
 **Operations:**
+
 1. **Create staging folders** if they don't exist
 2. **Read each item** and classify:
    - Voice transcripts → `_staged/voice/` (process last due to volume)
@@ -38,6 +41,7 @@ Before processing any item, read all inbox contents and **physically sort into s
 4. **Extract embedded instructions** - Surface meta-directives if non-trivial
 
 **Output:** Present summary to user:
+
 - Total items per category
 - Duplicates detected
 - Embedded instructions found
@@ -60,12 +64,13 @@ For each item in queue, complete all steps before moving to next:
 **User must touch every item.** Use `AskUserQuestion` to bundle context + clarification in one interaction.
 
 **Context first:** Present the capture content:
+
 - Short items (<300 chars): Show full text
 - Long items: Show brief excerpt or summary
 
 **Then ask** using AskUserQuestion with appropriate options:
 
-```
+```text
 Question: "How should we route this?"
 Options based on content:
 - Task → [likely area/project]
@@ -76,6 +81,7 @@ Options based on content:
 ```
 
 For ambiguous items, ask clarifying questions first:
+
 - "Is this actionable?"
 - "Which project/area does this belong to?"
 
@@ -84,6 +90,7 @@ For ambiguous items, ask clarifying questions first:
 ### Step 2: PROPOSE
 
 After user input, confirm the specific routing:
+
 - Destination file path
 - Task text (if applicable)
 - Any tags/dates
@@ -91,6 +98,7 @@ After user input, confirm the specific routing:
 Brief proposal. User approves or corrects.
 
 ### Step 3: EXECUTE + BANISH
+
 - Create/update destination artifact
 - **Delete original capture** (git preserves history; value lives in destination)
 - Brief acknowledgment: "Banished → [destination]"
@@ -100,6 +108,7 @@ Brief proposal. User approves or corrects.
 ## Phase 3: CLOSE
 
 After all items processed:
+
 - **Project review** - Any new projects missing next actions?
 - **Cleanup staging** - Remove empty `_staged/` subfolders
 - **Verification** - Inbox root and staging folders empty?
@@ -112,11 +121,13 @@ After all items processed:
 ## Mode
 
 ### Default: Interactive micro-ritual
+
 - One item at a time
 - User controls pace (can pause anytime)
 - Present → Propose → Confirm → Execute
 
 ### Batch mode
+
 Only if user explicitly says "batch" or "process all automatically"
 
 ---
