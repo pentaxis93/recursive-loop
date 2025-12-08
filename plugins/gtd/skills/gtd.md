@@ -157,6 +157,15 @@ Check for last plan: `{{brainFolder}}/archives/daily-plans/` - find most recent 
 
 **Skipped days:** No judgment. If last plan was days ago, that's data, not failure. Orient to now.
 
+### Quest Context
+
+Read `{{brainFolder}}/02-areas/Quest-Log.md`. Extract:
+
+- Main Quest title and success criteria
+- Side quest count (grouped or total)
+
+Surface prominently in output. If no main quest exists, note this—system should have auto-generated "Find our next quest."
+
 ### Pre-check
 
 Count `capture-*.md` files in `00-inbox/`. If ≥5 → Offer to process first.
@@ -197,6 +206,14 @@ status: active
 ---
 
 # {{$DAY_OF_WEEK}}, {{$DATE}}
+
+## Quest
+
+**{{Main Quest Title}}**
+Success: {{criteria}}
+Pool: {{N}} side quests parked
+
+---
 
 ## Focus
 
@@ -315,3 +332,13 @@ Running PLAN after skipped days:
 - `gtd plan` or "plan my day" or "orient" or "what now"
 
 Note: CLOSE is subsumed by evening/night PLAN invocations. No separate operation needed.
+
+---
+
+## System Integrity
+
+**Post-modification directive:** When changes are made to skill files in the recursive-loop repository, use `/devtools:plot` to submit via canonical PR workflow.
+
+**Rationale:** Standardized commands ensure consistent git hygiene, proper PR documentation, and CI validation. Manual git operations bypass these safeguards and create drift.
+
+**Trigger:** After updating this skill or related command files, invoke `/devtools:plot`.
