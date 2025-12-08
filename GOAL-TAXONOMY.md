@@ -69,6 +69,7 @@ Tools that shape identity, communication style, and intention. The operating sys
 **Mutually Exclusive:** Each goal addresses a distinct concern. A plugin's primary function maps to exactly one goal.
 
 **Collectively Exhaustive:** Any new plugin capability will fit one of these categories:
+
 - Helps with session/work state → Flow
 - Helps knowledge persist/grow → Memory
 - Helps prioritize/execute tasks → Action
@@ -80,6 +81,7 @@ Tools that shape identity, communication style, and intention. The operating sys
 ## Plugin Mapping
 
 ### Flow (DX)
+
 | Plugin | Skill | Function |
 |--------|-------|----------|
 | devtools | park | Preserve context for blocked work |
@@ -90,6 +92,7 @@ Tools that shape identity, communication style, and intention. The operating sys
 | (user) | unpark | Resume with validation |
 
 ### Memory (KM)
+
 | Plugin | Skill | Function |
 |--------|-------|----------|
 | second-brain | dump | Raw thought capture |
@@ -100,6 +103,7 @@ Tools that shape identity, communication style, and intention. The operating sys
 | second-brain | debrief | Weekly pattern review |
 
 ### Action (GTD)
+
 | Plugin | Skill | Function |
 |--------|-------|----------|
 | gtd | capture | Quick inbox capture |
@@ -107,12 +111,14 @@ Tools that shape identity, communication style, and intention. The operating sys
 | gtd | plan | Time-aware engagement |
 
 ### Cognition (CX)
+
 | Plugin | Skill | Function |
 |--------|-------|----------|
 | construct | prism | 10-lens analysis |
 | construct | observe-self | Skill extraction |
 
 ### Presence (Meta)
+
 | Plugin | Skill | Function |
 |--------|-------|----------|
 | talos | (core) | Behavioral framework |
