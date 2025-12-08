@@ -36,6 +36,84 @@ If section missing: prompt user to define scope.
 
 ---
 
+## Phase 0: PREFLIGHT
+
+**Purpose:** Ensure clean starting state. Three checks, hard gates.
+
+### Checks
+
+For each managed repository, verify:
+
+```bash
+# 1. On correct base branch?
+git -C {{path}} symbolic-ref --short HEAD
+# Must equal {{main}} (typically "main")
+
+# 2. Synced with remote?
+git -C {{path}} fetch {{remote}}
+git -C {{path}} status -sb
+# Must not show "behind" or "ahead"
+
+# 3. Nothing staged?
+git -C {{path}} diff --cached --quiet
+# Must return 0 (no staged changes)
+```
+
+### Check Matrix
+
+| Check | Pass | Fail |
+|-------|------|------|
+| Branch = {{main}} | Continue | HALT: "Switch to {{main}} first" |
+| Synced with origin (not ahead/behind) | Continue | HALT: "Push/pull to sync with remote first" |
+| No staged changes | Continue | HALT: "Unstage or commit staged work first" |
+
+### Output
+
+**All pass:**
+
+```text
+Preflight ✓ ({{main}}, synced, clean stage)
+Proceeding to RECON...
+```
+
+**Any fail:**
+
+```text
+Preflight ✗
+
+Problem: On branch 'feat/old-work', expected '{{main}}'
+Fix: git -C {{path}} checkout {{main}}
+
+Plot halted. Re-run after fixing.
+```
+
+### Multi-Repo Summary
+
+When multiple repos configured, aggregate results:
+
+```text
+Preflight Summary
+
+| Repo | Branch | Sync | Stage | Status |
+|------|--------|------|-------|--------|
+| recursive-loop | ✓ main | ✓ | ✓ | READY |
+| eterne | ✗ feat/x | ✓ | ✓ | BLOCKED |
+
+Fix: git -C /path/to/eterne checkout main
+```
+
+All repos must pass before proceeding to RECON.
+
+### Override
+
+**`--force` flag (escape hatch):**
+
+Skip PREFLIGHT with warning: "Preflight bypassed. You own the consequences."
+
+Use case: Intentional feature-branch plotting (stacked PRs).
+
+---
+
 ## Pass 1: RECON
 
 **Goal:** Understand all uncommitted changes, identify plot threads.
