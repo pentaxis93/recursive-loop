@@ -197,7 +197,7 @@ done
 
 After each PR (merged, pending, or failed):
 
-```
+```text
 PR #{{number}}: {{title}}
 URL: {{url}}
 CI: {{status}} ({{duration}})
@@ -208,7 +208,7 @@ Action: {{merged | pending | failed - reason}}
 
 After all threads processed:
 
-```
+```text
 ## Plot Summary
 
 | PR | Title | CI | Action |
