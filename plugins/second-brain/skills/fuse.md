@@ -12,6 +12,34 @@ Check `{{brainFolder}}/02-areas/Profile.md` exists. If not: prompt for /setup.
 
 ## Execute
 
+### 0. Check Alembics
+
+Scan `{{brainFolder}}/00-inbox/alembics/*/` for manifests with `status: ready-for-fusion`.
+
+**If ready alembics found:**
+
+```text
+Ready alembics:
+- theme-a (5 extracts, validated 2024-01-15)
+- theme-b (3 extracts, validated 2024-01-14)
+
+Fuse from alembic, or scan vault?
+[1] Alembic: theme-a
+[2] Alembic: theme-b
+[3] Scan vault (ignore alembics)
+```
+
+**If alembic selected:**
+
+- Use alembic extracts as sole input source
+- Skip vault scan (Step 1)
+- Proceed directly to pattern detection (Step 2)
+- After fusion complete and approved: delete alembic folder
+
+**If no ready alembics or vault scan chosen:**
+
+- Proceed to Step 1 (Gather)
+
 ### 1. Gather
 
 Scan vault for unprocessed content:
@@ -199,9 +227,19 @@ tags: ["#timeline", "#evolution"]
 **Frameworks:** {{created/updated}}
 ```
 
-### 5. Delete Processed Dumps
+### 5. Delete Processed Sources
 
 After successful fusion:
+
+**If fused from alembic:**
+
+1. Ask: "Approve framework? (y/n)"
+2. If approved, delete alembic: `rm -rf "{{brainFolder}}/00-inbox/alembics/{{alembic-name}}/"`
+3. If not approved:
+   - Keep alembic intact
+   - Framework saved as draft for iteration
+
+**If fused from vault scan:**
 
 ```bash
 rm "{{dump_path}}"
@@ -213,6 +251,7 @@ rm "{{dump_path}}"
 - Git preserves history if needed
 - Insights live in frameworks
 - Clean vault = reduced cognitive load
+- Alembic deletion requires explicit approval (user gate)
 
 ### 6. Route Tasks
 

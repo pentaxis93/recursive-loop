@@ -8,6 +8,8 @@
 
 ```text
 00-inbox/           # Unprocessed captures
+  alembics/         # Themed fusion containers (distill)
+  dumps/            # Raw stream-of-consciousness
 01-projects/        # Active projects (has deadline/end state)
 02-areas/           # Ongoing responsibilities
 03-resources/       # Reference materials
@@ -220,7 +222,29 @@ When executing skills:
 - `dump` → Creates raw capture in `00-inbox/dumps/`
 - `intel` → Creates intel report in `archives/intelligence/intel/`
 - `refine` → Processes raw → permanent notes with links
-- `fuse` → Consolidates permanents → frameworks in `05-knowledge/`
+- `distill` → Extracts themed content into alembics (`00-inbox/alembics/`)
+- `fuse` → Consolidates alembics or vault content → frameworks in `05-knowledge/`
+
+### Alembic Workflow
+
+```text
+dump (mixed themes) → distill → alembic (themed) → fuse → framework
+                          ↓
+                      residual → 00-inbox/ (reprocessing)
+```
+
+**Alembic structure:**
+
+```text
+00-inbox/alembics/
+  {{theme-name}}/
+    _manifest.md      # State, validation, extract inventory
+    extract-001.md    # Extracted content
+    extract-002.md
+    ...
+```
+
+**Lifecycle:** `empty → pending-review → valid → ready-for-fusion → fused → [deleted]`
 
 All skills must follow these canonical rules for frontmatter, linking, and file placement.
 
