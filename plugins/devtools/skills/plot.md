@@ -52,7 +52,7 @@ git -C {{path}} symbolic-ref --short HEAD
 # 2. Synced with remote?
 git -C {{path}} fetch {{remote}}
 git -C {{path}} status -sb
-# Must not show "behind"
+# Must not show "behind" or "ahead"
 
 # 3. Nothing staged?
 git -C {{path}} diff --cached --quiet
@@ -64,7 +64,7 @@ git -C {{path}} diff --cached --quiet
 | Check | Pass | Fail |
 |-------|------|------|
 | Branch = {{main}} | Continue | HALT: "Switch to {{main}} first" |
-| Not behind origin | Continue | HALT: "Pull remote changes first" |
+| Synced with origin (not ahead/behind) | Continue | HALT: "Push/pull to sync with remote first" |
 | No staged changes | Continue | HALT: "Unstage or commit staged work first" |
 
 ### Output
