@@ -163,12 +163,12 @@ EOF
 ```bash
 # Poll CI status (10 second window)
 for i in {1..10}; do
-  STATUS=$(gh pr checks {{pr-number}} --json state --jq '.[].state' | sort -u)
-  if [[ "$STATUS" == "SUCCESS" ]]; then
+  CHECKS=$(gh pr checks {{pr-number}} 2>&1)
+  if echo "$CHECKS" | grep -q "pass.*pass.*pass"; then
     # Fast-path: all checks passed
     gh pr merge {{pr-number}} --squash --delete-branch
     break
-  elif [[ "$STATUS" == *"FAILURE"* ]]; then
+  elif echo "$CHECKS" | grep -q "fail"; then
     # CI failed - attempt remediation
     break
   fi
