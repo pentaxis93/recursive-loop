@@ -72,6 +72,7 @@ distill add <alembic> <source-file> [--partial]
 **Full extraction:** Entire capture moves to alembic.
 
 **Partial extraction (`--partial`):**
+
 1. Display source content
 2. Ask: "Which content belongs to theme `{{alembic}}`?"
 3. Extract selected content → alembic
@@ -94,10 +95,12 @@ alembic: "{{theme-name}}"
 ```
 
 **Provenance rule:**
+
 - Source archived → include `source:` path
 - Source active/deleted → omit `source:` (content lives in extract now)
 
 **After extraction:**
+
 1. Update manifest `## Extracts` table
 2. Add log entry
 3. Set `status: pending-review`
@@ -213,6 +216,7 @@ distill inspect <alembic>
 ```
 
 Display:
+
 - Full manifest
 - Theme description
 - Extract summaries
@@ -286,16 +290,19 @@ Residual re-enters normal processing pipeline via `/process-inbox` or `refine`.
 ## Quality Guardrails
 
 **Before extraction:**
+
 - Read source fully
 - Understand theme definition
 - Identify clear boundaries
 
 **During extraction:**
+
 - Preserve context needed for standalone understanding
 - Don't over-extract (leave related-but-different content)
 - Don't under-extract (get all relevant material)
 
 **Validation criteria:**
+
 - Coherence: Does extract serve stated theme?
 - Sufficiency: Enough material for meaningful synthesis?
 - Redundancy: Are extracts distinct contributions?

@@ -30,12 +30,14 @@ Fuse from alembic, or scan vault?
 ```
 
 **If alembic selected:**
+
 - Use alembic extracts as sole input source
 - Skip vault scan (Step 1)
 - Proceed directly to pattern detection (Step 2)
 - After fusion complete and approved: delete alembic folder
 
 **If no ready alembics or vault scan chosen:**
+
 - Proceed to Step 1 (Gather)
 
 ### 1. Gather
@@ -232,10 +234,7 @@ After successful fusion:
 **If fused from alembic:**
 
 1. Ask: "Approve framework? (y/n)"
-2. If approved:
-   ```bash
-   rm -rf "{{brainFolder}}/00-inbox/alembics/{{alembic-name}}/"
-   ```
+2. If approved, delete alembic: `rm -rf "{{brainFolder}}/00-inbox/alembics/{{alembic-name}}/"`
 3. If not approved:
    - Keep alembic intact
    - Framework saved as draft for iteration

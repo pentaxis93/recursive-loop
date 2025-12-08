@@ -234,6 +234,7 @@ dump (mixed themes) → distill → alembic (themed) → fuse → framework
 ```
 
 **Alembic structure:**
+
 ```text
 00-inbox/alembics/
   {{theme-name}}/
