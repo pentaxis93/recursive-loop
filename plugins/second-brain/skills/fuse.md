@@ -1,8 +1,10 @@
 ---
-description: Fuse scattered insights into frameworks through pattern synthesis
+description: Synthesize scattered insights into integration candidates
 ---
 
 # Fuse
+
+Knowledge consolidation. Primary evolutionary pressure for cosmological concepts.
 
 Config: `.claude/brain-config.json` → `brainFolder`
 
@@ -14,30 +16,28 @@ Check `{{brainFolder}}/02-areas/Profile.md` exists. If not: prompt for /setup.
 
 ### 0. Check Alembics
 
-Scan `{{brainFolder}}/00-inbox/alembics/*/` for manifests with `status: ready-for-fusion`.
+Scan `{{brainFolder}}/00-inbox/alembics/` for manifest with `status: ready-for-fusion` or `status: held`.
 
-**If ready alembics found:**
+**If ready/held alembics found:**
 
 ```text
-Ready alembics:
-- theme-a (5 extracts, validated 2024-01-15)
-- theme-b (3 extracts, validated 2024-01-14)
+Alembics available:
+- [ready] theme-a (5 extracts)
+- [held] theme-b (3 extracts, previously fused)
 
-Fuse from alembic, or scan vault?
+Select source:
 [1] Alembic: theme-a
-[2] Alembic: theme-b
+[2] Alembic: theme-b (additional pass)
 [3] Scan vault (ignore alembics)
 ```
 
 **If alembic selected:**
-
-- Use alembic extracts as sole input source
+- Use alembic extracts as input source
 - Skip vault scan (Step 1)
-- Proceed directly to pattern detection (Step 2)
-- After fusion complete and approved: delete alembic folder
+- Proceed to pattern detection (Step 2)
+- After fusion: set alembic status to `held` (not deleted—explicit release required)
 
 **If no ready alembics or vault scan chosen:**
-
 - Proceed to Step 1 (Gather)
 
 ### 1. Gather
@@ -46,9 +46,9 @@ Scan vault for unprocessed content:
 
 | Location | Content |
 |----------|---------|
-| `00-inbox/dumps/` | Unprocessed dumps |
+| `00-inbox/dumps/` | Raw dumps |
 | `01-projects/*/dumps/` | Project dumps |
-| `archives/intelligence/intel/` | Intel reports |
+| `archives/intelligence/` | Intel reports |
 
 Ask: "Time period? (week, month, quarter, all, custom)"
 
@@ -62,291 +62,119 @@ Identify items with `status: "captured"` or missing consolidation metadata.
 | Temporal | How thinking evolved, inflection points |
 | Domain | Cross-domain correlations (personal↔professional↔project) |
 | Contradiction | Conflicts, tensions, perspective shifts |
-| Meta | Decision patterns, problem-solving, energy/creativity |
+| Meta | Decision patterns, problem-solving approaches |
 
-### 3. Synthesize Frameworks
+### 3. Classify & Synthesize
 
-From patterns → principles:
+For each identified pattern/insight:
 
-1. **Identify Core Principles** - What rules/heuristics emerge?
-2. **Test Against Evidence** - Do sources support? Counter-examples?
-3. **Define Boundaries** - When applies, when doesn't, assumptions
-4. **Create Applications** - Use cases, decision templates
+**Classification test:** "Can this be split into 3+ standalone concepts?"
+- YES → Framework/pattern candidate
+- NO → Permanent note candidate
 
-### 4. Output
+**Synthesize:**
+- Permanent notes: atomic, single concept, own words
+- Frameworks: multi-concept synthesis, structured sections
+- Patterns: recurring structural insights across domains
 
-#### Framework File
+### 4. Stage Candidates
 
-**File:** `{{brainFolder}}/05-knowledge/consolidated/{{name}}-framework.md`
-
-```markdown
----
-type: "framework"
-domain: "{{domain}}"
-framework: "{{name}}"
-created: "{{YYYY-MM-DD}}"
-last_updated: "{{YYYY-MM-DD}}"
-source_documents: {{count}}
-status: "emerging|working|stable"
-tags: ["#framework", "#consolidated", "#{{topic}}"]
----
-
-# {{Framework Name}}
-
-## Overview
-{{Description and purpose}}
-
-**Status:** {{Emerging|Working|Stable}}
-**Sources:** {{count}} documents
-
----
-
-## Core Principles
-
-### Principle 1: {{Name}}
-**Statement:** {{Clear principle}}
-
-**Evidence:**
-- [[dump-YYYY-MM-DD]] - {{insight}}
-- [[intel-YYYY-MM-DD]] - {{evidence}}
-
-**Confidence:** {{High|Medium|Low}} - {{reasoning}}
-
----
-
-## Applications
-
-### {{Use Case}}
-**When:** {{situation}}
-
-**How:**
-1. {{step}}
-
-**Expected:** {{outcome}}
-
----
-
-## Boundaries
-
-**Works when:**
-- {{condition}}
-
-**Fails when:**
-- {{anti-condition}}
-
-**Pitfalls:**
-- {{pitfall}}
-
----
-
-## Evolution
-
-### {{Date Range}}: {{Phase}}
-**Catalysts:** {{triggers}}
-**Shifts:** {{changes}}
-
----
-
-## Related
-- [[other-framework]] - {{relationship}}
-
----
-
-*Fused from {{X}} sources | Confidence: {{level}} | Status: {{status}}*
-```
-
-#### Pattern File
-
-**File:** `{{brainFolder}}/05-knowledge/patterns/pattern-{{name}}.md`
+**Output to:** `{{brainFolder}}/00-inbox/integration/candidate-NNN-slug.md`
 
 ```markdown
 ---
-type: "pattern"
-pattern: "{{name}}"
+title: "{{Title}}"
 created: "{{YYYY-MM-DD}}"
-domains: ["{{domain1}}", "{{domain2}}"]
-frequency: "high|medium|low"
-tags: ["#pattern", "#analysis"]
+type: "integration-candidate"
+candidate-type: "permanent-note|framework|pattern"
+source-count: {{N}}
+status: "pending"
 ---
 
-# Pattern: {{Name}}
+# {{Title}}
 
-## Description
-{{What recurs}}
+## Concept
 
-**Frequency:** {{X}} occurrences over {{timeframe}}
-**Domains:** {{where it appears}}
+{{Synthesized content}}
 
----
+## Source Evidence
 
-## Occurrences
+- [[source-1]] - {{relevant insight}}
+- [[source-2]] - {{relevant insight}}
 
-### {{Date}} - [[source]]
-**Context:** {{situation}}
-**Manifestation:** {{how it appeared}}
-**Outcome:** {{result}}
+## Proposed Links
 
----
-
-## Analysis
-
-**Triggers:** {{what causes it}}
-**Consequences:** {{what follows}}
-**Actions:** {{amplify if positive, mitigate if negative}}
+- [[related-concept-1]] - {{relationship}}
+- [[related-concept-2]] - {{relationship}}
 ```
 
-#### Timeline Entry
+**Numbering:** Sequential from 001, with descriptive slug.
 
-**File:** `{{brainFolder}}/05-knowledge/timeline/{{topic}}-evolution-{{YYYY-MM}}.md`
+### 5. Update Integration Manifest
+
+Update `{{brainFolder}}/00-inbox/integration/manifest.md`:
 
 ```markdown
----
-type: "timeline"
-topic: "{{theme}}"
-date_range: "{{start}} to {{end}}"
-created: "{{YYYY-MM-DD}}"
-tags: ["#timeline", "#evolution"]
----
-
-# Evolution: {{Theme}}
-
-## Shift
-**From:** {{initial state}}
-**To:** {{end state}}
-**Key Change:** {{fundamental shift}}
-
-## Catalysts
-- [[source]] - {{trigger}}
-
-## Evidence Trail
-- [[early-doc]] - {{initial thinking}}
-- [[later-doc]] - {{evolved understanding}}
-
-## Impact
-**Decisions:** {{effect}}
-**Frameworks:** {{created/updated}}
+## Pending Candidates
+- [ ] candidate-001-concept-name.md
+- [ ] candidate-002-another-concept.md
 ```
 
-### 5. Delete Processed Sources
+Set manifest `status: pending`.
 
-After successful fusion:
+### 6. Handle Sources
 
 **If fused from alembic:**
-
-1. Ask: "Approve framework? (y/n)"
-2. If approved, delete alembic: `rm -rf "{{brainFolder}}/00-inbox/alembics/{{alembic-name}}/"`
-3. If not approved:
-   - Keep alembic intact
-   - Framework saved as draft for iteration
+- Set alembic manifest `status: held`
+- Do NOT delete extracts (explicit release required later)
 
 **If fused from vault scan:**
+- Delete processed dumps after staging candidates
+- Git preserves history
 
-```bash
-rm "{{dump_path}}"
+**Rationale:** Explicit release lifecycle. Sources may have multi-path potential.
+
+### 7. Prompt for Integration
+
+```text
+Fusion complete.
+- {{N}} candidates staged to integration queue
+- Sources: {{processed/held}}
+
+Integration candidates ready. Invoke /integrate? (y/n)
 ```
 
-**Rationale:**
+If user confirms: invoke `/second-brain:integrate`
+If user declines: candidates remain staged for later
 
-- GTD canon: processed items leave system
-- Git preserves history if needed
-- Insights live in frameworks
-- Clean vault = reduced cognitive load
-- Alembic deletion requires explicit approval (user gate)
+## Output Types
 
-### 6. Route Tasks
+### Permanent Note Candidate
 
-| Task Type | Destination |
-|-----------|-------------|
-| Framework ready | `02-areas/Zettelkasten.md` High Priority |
-| Needs analysis | `02-areas/Zettelkasten.md` Someday/Maybe |
-| Pattern to monitor | `02-areas/Zettelkasten.md` Waiting On |
-| Framework application | Relevant project |
+Single indivisible concept. Will gain 3+ links during integration.
 
-### 7. Integrate
+### Framework Candidate
 
-#### Link to Projects/Areas
+Multi-concept synthesis with:
+- Core principles (with evidence)
+- Applications (use cases)
+- Boundaries (when applies, when doesn't)
+- Related frameworks
 
-Calculate relevance:
+### Pattern Candidate
 
-| Match | Points |
-|-------|--------|
-| Domain tag match | +3 |
-| Topic tag overlap | +2 |
-| Project in sources | +3 |
-| Name in content | +1 |
-
-Threshold: >= 3 points → add link
-
-Update `## 🔗 Related` → `**Resources:**` in projects
-Update `## 📚 Resources & References` in areas
-
-#### Update MOC
-
-**File:** `{{brainFolder}}/05-knowledge/MOC-Consolidated-Knowledge.md`
-
-```markdown
----
-type: "moc"
-title: "Knowledge Index"
-last_updated: "{{YYYY-MM-DD}}"
-tags: ["#moc", "#knowledge"]
----
-
-# Knowledge Index
-
-## Frameworks by Domain
-
-### Professional
-- [[framework]] - {{description}} ({{status}})
-
-### Personal
-- [[framework]] - {{description}} ({{status}})
-
----
-
-## Patterns
-- [[pattern-name]] - {{description}} ({{frequency}})
-
----
-
-## Applied To
-
-### [[framework]]
-**Projects:** [[project1]], [[project2]]
-
----
-
-*Frameworks: {{X}} | Patterns: {{Y}}*
-```
-
-#### Update Profile (if strategic)
-
-If framework mentions "strategic", "goal", "priority" or supports stated goals:
-
-Add to `{{brainFolder}}/02-areas/Profile.md` under `## Active Knowledge Frameworks`:
-
-```markdown
-### [[framework]]
-**Applies to:** {{contexts}}
-**Key Guidance:** {{summary}}
-```
-
-### 8. Confirm
-
-Report:
-
-- Documents processed
-- Frameworks created/updated
-- Patterns identified
-- Tasks routed
-- Links created
+Recurring structural insight:
+- Description of what recurs
+- Occurrences with context
+- Triggers and consequences
+- Actions (amplify/mitigate)
 
 ## Guidelines
 
-**Quality:** Don't force immature insights. Mark status clearly.
+**Quality:** Don't force immature insights. Mark confidence clearly.
 
 **Nuance:** Preserve complexity. Note limitations. Keep unresolved tensions.
 
 **Traceability:** Link to sources. Show evidence. Enable audit.
 
-**Living:** Frameworks evolve. Iterate. Version via Git.
+**Multi-path awareness:** Same material may fuse into multiple valid outputs. Alembic `held` state preserves this option.
