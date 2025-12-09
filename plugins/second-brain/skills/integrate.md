@@ -37,13 +37,14 @@ Process all sequentially? (y/n/select)
 
 For each candidate:
 
-```
+```text
 DETECT HOMOLOGY → SURFACE EVIDENCE → RECOMMEND → ALIGN → EXECUTE
 ```
 
 #### 1.1 Detect Homology
 
 Scan vault for homologous evidence:
+
 - `{{brainFolder}}/permanent-notes/`
 - `{{brainFolder}}/05-knowledge/`
 
@@ -129,24 +130,28 @@ Confirm: _
 #### 1.5 Execute Decision
 
 **MERGE:**
+
 1. Read existing note
 2. Integrate new insights (preserve atomicity)
 3. Update links if needed
 4. Delete candidate
 
 **LINK:**
+
 1. Create new permanent note/framework/pattern
 2. Add 3+ links (including to homologous notes)
 3. Update related notes with backlinks
 4. Delete candidate
 
 **MULTI-PATH:**
+
 1. Create new permanent note/framework/pattern
 2. Add explicit link to homologous note with relationship explanation
 3. Note in both: "Related pattern: [[Other]] - same deep structure, different domain"
 4. Delete candidate
 
 **CREATE NEW:**
+
 1. Create new permanent note/framework/pattern
 2. Add 3+ links (discover connections)
 3. Update MOCs if applicable
@@ -192,11 +197,13 @@ Vault integrity verified.
 ## Quality Gates
 
 **Permanent Notes:**
+
 - Atomic (one idea)
 - Connected (3+ links with relationship explanations)
 - Own words
 
 **Frameworks:**
+
 - Multi-concept synthesis
 - Links to constituent permanent notes
 - MOC-style organization

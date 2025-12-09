@@ -32,12 +32,14 @@ Select source:
 ```
 
 **If alembic selected:**
+
 - Use alembic extracts as input source
 - Skip vault scan (Step 1)
 - Proceed to pattern detection (Step 2)
 - After fusion: set alembic status to `held` (not deleted—explicit release required)
 
 **If no ready alembics or vault scan chosen:**
+
 - Proceed to Step 1 (Gather)
 
 ### 1. Gather
@@ -69,10 +71,12 @@ Identify items with `status: "captured"` or missing consolidation metadata.
 For each identified pattern/insight:
 
 **Classification test:** "Can this be split into 3+ standalone concepts?"
+
 - YES → Framework/pattern candidate
 - NO → Permanent note candidate
 
 **Synthesize:**
+
 - Permanent notes: atomic, single concept, own words
 - Frameworks: multi-concept synthesis, structured sections
 - Patterns: recurring structural insights across domains
@@ -125,10 +129,12 @@ Set manifest `status: pending`.
 ### 6. Handle Sources
 
 **If fused from alembic:**
+
 - Set alembic manifest `status: held`
 - Do NOT delete extracts (explicit release required later)
 
 **If fused from vault scan:**
+
 - Delete processed dumps after staging candidates
 - Git preserves history
 
@@ -156,6 +162,7 @@ Single indivisible concept. Will gain 3+ links during integration.
 ### Framework Candidate
 
 Multi-concept synthesis with:
+
 - Core principles (with evidence)
 - Applications (use cases)
 - Boundaries (when applies, when doesn't)
@@ -164,6 +171,7 @@ Multi-concept synthesis with:
 ### Pattern Candidate
 
 Recurring structural insight:
+
 - Description of what recurs
 - Occurrences with context
 - Triggers and consequences
