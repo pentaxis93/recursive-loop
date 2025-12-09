@@ -1,5 +1,5 @@
 ---
-description: Consolidate scattered insights into frameworks
+description: Synthesize scattered insights into integration candidates
 ---
 
 Execute the fuse skill workflow.

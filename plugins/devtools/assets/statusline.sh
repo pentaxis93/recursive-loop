@@ -11,4 +11,4 @@ cyan='\033[36m'
 dim='\033[2m'
 reset='\033[0m'
 
-printf "${cyan}%s${reset} ${dim}%s${reset}" "$model" "$cwd"
+printf "${cyan}%s${reset} ${dim}%s${reset}\n" "$model" "$cwd"
