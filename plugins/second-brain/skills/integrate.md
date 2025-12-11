@@ -6,6 +6,21 @@ description: Pattern recognition and vault integration via Smith's Loop
 
 Pattern recognition and vault integration. The Loop's refinement mechanism.
 
+---
+
+## Alchemical Gate
+
+**Classification:** `integrate` is an alchemical skill.
+
+**Requirement:** Opus-class servitor required.
+
+```
+if model != opus:
+    return 403 Forbidden: "Alchemy requires Opus servitor"
+```
+
+---
+
 **Operational weight:** This operation is delicate and critical—it is the primary mechanism for applying Smith's Loop to cosmological concepts. Extreme mindfulness is required.
 
 Config: `.claude/brain-config.json` → `brainFolder`

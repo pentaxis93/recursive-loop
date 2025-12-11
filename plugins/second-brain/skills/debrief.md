@@ -4,6 +4,21 @@ description: Cross-domain pattern analysis and strategic reflection for weekly r
 
 # Debrief
 
+---
+
+## Alchemical Gate
+
+**Classification:** `debrief` is an alchemical skill.
+
+**Requirement:** Opus-class servitor required.
+
+```
+if model != opus:
+    return 403 Forbidden: "Alchemy requires Opus servitor"
+```
+
+---
+
 Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight
