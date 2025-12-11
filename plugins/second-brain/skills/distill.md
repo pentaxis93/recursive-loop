@@ -4,6 +4,21 @@ description: Extract themed content into alembics for focused fusion
 
 # Distill
 
+---
+
+## Alchemical Gate
+
+**Classification:** `distill` is an alchemical skill.
+
+**Requirement:** Opus-class servitor required.
+
+```text
+if model != opus:
+    return 403 Forbidden: "Alchemy requires Opus servitor"
+```
+
+---
+
 Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight

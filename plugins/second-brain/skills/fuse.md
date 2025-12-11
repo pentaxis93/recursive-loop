@@ -6,6 +6,21 @@ description: Synthesize scattered insights into integration candidates
 
 Knowledge consolidation. Primary evolutionary pressure for cosmological concepts.
 
+---
+
+## Alchemical Gate
+
+**Classification:** `fuse` is an alchemical skill.
+
+**Requirement:** Opus-class servitor required.
+
+```text
+if model != opus:
+    return 403 Forbidden: "Alchemy requires Opus servitor"
+```
+
+---
+
 Config: `.claude/brain-config.json` → `brainFolder`
 
 ## Pre-flight

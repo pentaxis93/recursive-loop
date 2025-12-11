@@ -11,6 +11,30 @@ The loading space. Downloadable cognitive programs for Claude Code.
 
 ## Skills
 
+### meta
+
+Step up, observe the process, extract transmissible patterns.
+
+**Invoke:** `meta`, "step back", "what just happened", "what's the pattern"
+
+**The Five Moves:**
+
+```text
+PAUSE → STEP UP → OBSERVE → NAME → CAPTURE
+```
+
+1. **PAUSE** — Stop. Create space.
+2. **STEP UP** — Shift from inside to above.
+3. **OBSERVE** — See without judgment. What happened?
+4. **NAME** — Articulate the pattern. Naming IS the knowing.
+5. **CAPTURE** — Route to home. Meta without output is incomplete.
+
+**Output:** Pattern observation with capture location.
+
+**Use for:** Any context where a pattern might be lurking. Lighter than observe-self.
+
+---
+
 ### observe-self
 
 Four-pass cognitive method extraction via topology observation.
@@ -127,6 +151,10 @@ This mirrors Gurdjieff's **self-remembering**: constant divided attention (pulse
 ---
 
 ## Commands
+
+### /construct:meta
+
+Step up, observe the process, extract transmissible patterns.
 
 ### /construct:prism
 
